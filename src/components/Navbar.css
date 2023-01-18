@@ -1,0 +1,139 @@
+/* .absolute{
+  position: sticky;
+  left: 5%;
+  width: 20vw;
+  top: 20%;
+  height: 0vw;
+  z-index: 30;
+  transform: scale(150%);
+  transition: 1s;
+
+}
+ */
+
+/* 
+.panel-block:not(:last-child), .panel-tabs:not(:last-child){
+  border-bottom:rgba(0, 0, 0, 0.229);
+  backdrop-filter: blur(5px);
+  padding-bottom: 1%;
+} */
+
+nav{
+  position: sticky;
+  top: 60%;
+  left: -10px;
+  width: 20vw;
+  height: 0vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  transition: 1s;
+}
+
+nav a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 6%;
+  transition: 0.5s;
+  /* margin-top: 10px; */
+}
+
+nav a:hover{
+  color: rgb(0, 0, 0);
+  transform: scale(110%);
+  padding-left: 40px;
+  font-weight: bolder;
+}
+
+.hide {
+  animation: hide 5s;
+  /* position: relative; */
+  left: -500px;
+  display: none;
+}
+
+@keyframes hide {
+  0% {left: 0px;}
+  100%{left: -500px}
+}
+/* .show {
+  animation: hide 5s;
+  position: absolute;
+  left: 0px;
+}
+
+@keyframes hide {
+  0% {left: -500px;}
+  100%{left: 0px}
+} */
+
+#n1{
+  transition: 0.5s;
+}
+#n2{
+  transition: 0.5s;
+}
+#n3{
+  transition: 0.5s;
+}
+#n4{
+  transition: 0.5s;
+}
+
+#n1:hover + #n2{
+  color: rgba(255, 255, 255, 0.104);
+  transform: scale(105%);
+  padding-left: 10px;
+}
+#n2:hover + #n3, 
+#n1{
+  color: rgba(255, 255, 255, 0.104);
+  transform: scale(105%);
+  padding-left: 10px;
+}
+#n3:hover + #n4, 
+#n2{
+  color: rgba(255, 255, 255, 0.104);
+  transform: scale(105%);
+  padding-left: 10px;
+}
+#n4:hover + #n3{
+  color: rgba(255, 255, 255, 0.104);
+  transform: scale(105%);
+  padding-left: 10px;
+}
+
+.glass{
+  background-color: rgba(0, 0, 0, 0.223);
+  color: white;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10 1;
+  border-radius: 0px 21px 21px 0px;
+
+}
+.glass:hover{
+  background-color: rgba(255, 255, 255, 0.827);
+  backdrop-filter: blur(10px);
+  border-radius: 0px 15px 15px 0px;
+}
+
+
+.div{
+  width: 20vw;
+  /* padding-bottom: 5vw; */
+  margin-bottom: 0.75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
