@@ -3,6 +3,11 @@ import "bulma/css/bulma.min.css";
 // import styles from "./index.comp.css";
 import "./index.comp.css";
 import planet from "../img/earth.png";
+import code_com from "../img/comp_icons/code_com.jpg";
+import cybercomb from "../img/comp_icons/Cybercomb.jpg";
+import dexigner from "../img/comp_icons/Dexigner.jpg";
+import intellect from "../img/comp_icons/Intellect.jpg";
+import web_dezigner from "../img/comp_icons/Web_Dezigner.jpg";
 import "../components/Navbar.css";
 import { useState, useEffect } from "react";
 
@@ -17,45 +22,49 @@ import { useState, useEffect } from "react";
 // )
 
 export default function useCompetitionsmodel() {
-  // let earth = document.getElementById("planet");
-  // window.addEventListener('scroll', function(){
-  //   let value = this.window.scrollY;
-  //   earth.style.top = 6.5 + value;
-  //   // console.log(value);
-  // });
+  let earth = document.getElementById("planet");
+  window.addEventListener('scroll', function(){
+    let value = this.window.scrollY;
+    earth.style.top = 6.5 + value;
+    // console.log(value);
+  });
 
-  // const [show, setShow] = useState(true);
-  // const [lastScrollY, setLastScrollY] = useState(0);
-  // const navbar = document.getElementById("nav");
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  let navbar = document.getElementById("nav");
 
-  // const controlNavbar = () => {
-  //   if (typeof window !== 'undefined') {
-  //     if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-  //       navbar.classList.add('hide')
-  //       console.log("hide");
-  //     } else { // if scroll up show the navbar
-  //       navbar.classList.add('show')
-  //       console.log("show");
-  //     }
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        navbar.classList.add('hide')
+        // console.log("hide");
+      } else { // if scroll up show the navbar
+        navbar.classList.add('show')
+        navbar.classList.remove('hide')
+      }
 
-  //     // remember current page location to use in the next move
-  //     setLastScrollY(window.scrollY);
-  //   }
-  // };
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  };
 
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     window.addEventListener('scroll', controlNavbar);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
 
-  //     // cleanup function
-  //     return () => {
-  //       window.removeEventListener('scroll', controlNavbar);
-  //     };
-  //   }
-  // }, [lastScrollY]);
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+  useEffect(() => {
+    if (!navbar) navbar = document.getElementById("nav");
+  }, [])
+  
   return (
     <div>
-      <nav class="" id="nav">
+      <nav class="hide" id="nav">
         <img></img>
         <div class="glass div " id="n1">
           <a href="#" class="title is-6">
@@ -98,13 +107,13 @@ export default function useCompetitionsmodel() {
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img src={planet} alt="Placeholder image"></img>
+                    <img src={code_com} alt="Placeholder image"></img>
                   </figure>
                 </div>
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
-                      <p class="title is-4">Scripter</p>
+                      <p class="title is-4">Code_com</p>
                     </div>
                   </div>
 
@@ -123,7 +132,7 @@ export default function useCompetitionsmodel() {
                 <div class="modal-background"></div>
                 <div class="modal-card">
                   <header class="modal-card-head">
-                    <p class="modal-card-title">Scripter</p>
+                    <p class="modal-card-title">Code_com</p>
                     <button class="delete" aria-label="close"></button>
                   </header>
                   <section class="modal-card-body">
@@ -151,13 +160,13 @@ export default function useCompetitionsmodel() {
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img src={planet} alt="Placeholder image"></img>
+                    <img src={web_dezigner} alt="Placeholder image"></img>
                   </figure>
                 </div>
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
-                      <p class="title is-4">HYPERLINK</p>
+                      <p class="title is-4">web deZign</p>
                     </div>
                   </div>
 
@@ -360,47 +369,6 @@ export default function useCompetitionsmodel() {
                       <li>• Adobe Illustrator</li>
                       <li>• Corel Draw</li>
                     </ul>
-                  </section>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src={planet} alt="Placeholder image"></img>
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4">Assemblage</p>
-                    </div>
-                  </div>
-
-                  <div class="content">PC Assembling competition</div>
-                </div>
-                <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
-                    Register
-                  </a>
-                  <a href="#" class="card-footer-item">
-                    More Info
-                  </a>
-                </footer>
-              </div>
-              <div class="modal">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                  <header class="modal-card-head">
-                    <p class="modal-card-title">Assemblage</p>
-                    <button class="delete" aria-label="close"></button>
-                  </header>
-                  <section class="modal-card-body">
-                    <img src={planet}></img>
-                    <p class="subtitle is-5 black-text">
-                    Assembling a PC of separated parts is your purpose in this competition. Winners will be judged according to the time they take to assemble the PC. The team who takes the minimum time to assemble the PC will be the winning team.
-                    </p>
                   </section>
                 </div>
               </div>
