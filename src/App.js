@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./Pages/Home";
-// import Editorpanel from "./Pages/Editor";
+import Test from "./Pages/Test";
 // import About from "./Pages/about";
 // import News from "./Pages/news";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/news" element={<News />} /> */}
+          <Route path="/test" element={<Test />} />
           {/* <Route path="/contact" element={<Contact />} /> */}
           {/* <Route path="editor" element={<Editorpanel />} /> */}
           {/* <Route path="/about" element={<About />} /> */}

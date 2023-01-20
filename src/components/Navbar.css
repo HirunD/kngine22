@@ -50,21 +50,62 @@ nav a{
 nav a:hover{
   color: rgb(0, 0, 0);
   transform: scale(110%);
-  padding-left: 40px;
+  padding-left: 20px;
   font-weight: bolder;
 }
+/* .nav-controller{
+  cursor: pointer;
+  z-index: 3;
+  right: 5px;
+  top: 5px;
+  position: absolute;
+} */
 
-.hide {
-  animation: hide 5s;
-  /* position: relative; */
-  left: -500px;
-  display: none;
-}
+/* .navbar{
+  position: fixed;
+  top: 10%;
+  left: -5px;
+  width: 2vw;
+  height: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: 1s;
+  background-color: rgba(255, 255, 255, 0.118);
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+} */
 
+
+/* .navbar:hover + #nav{
+  animation: show 3s; 
+  position: absolute;
+  left: 0px;
+} */
+
+/* #nav:hover{
+  animation: show 3s; 
+  position: absolute;
+  left: 0px;
+} */
+
+
+/* .hide {
+  position: absolute;
+  left: -140px;
+  animation-delay: 1s;
+} */
+/* 
 @keyframes hide {
   0% {left: 0px;}
   100%{left: -500px}
-}
+} */
+/* @keyframes show {
+  0% {left: -140px;}
+  100%{left: 0px}
+} */
 /* .show {
   animation: hide 5s;
   position: absolute;
@@ -113,17 +154,29 @@ nav a:hover{
 }
 
 .glass{
-  background-color: rgba(0, 0, 0, 0.223);
+  background-color: rgba(255, 255, 255, 0.097);
   color: white;
   backdrop-filter: blur(5px);
-  box-shadow: 0 0 10 1;
+  box-shadow: 0px 0px 6px 0.5px rgba(95, 95, 95, 0.258);
   border-radius: 0px 21px 21px 0px;
+  margin-left: -240px;
+  transition: 1s;
+  width: 10px;
 
 }
 .glass:hover{
   background-color: rgba(255, 255, 255, 0.827);
   backdrop-filter: blur(10px);
   border-radius: 0px 15px 15px 0px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 6px 0.5px rgba(255, 255, 255, 0.807);
+}
+ #nav{
+  width: 20vw;
+ }
+
+.div{
+  margin-left: -10px;
 }
 
 

@@ -129,3 +129,23 @@ html{
     height: 12rem;
     overflow: hidden;
   }
+
+  .heor{
+    z-index: 0;
+  }
+
+  .sec-comp{
+    z-index: 34;
+  }
+
+  .container{
+    background: none;
+  }
+
+  .column{
+    background: none;
+  }
+
+  .moremargin{
+    margin-bottom: 10px ;
+  }

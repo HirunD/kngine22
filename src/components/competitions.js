@@ -4,12 +4,18 @@ import "bulma/css/bulma.min.css";
 import "./index.comp.css";
 import planet from "../img/earth.png";
 import code_com from "../img/comp_icons/code_com.jpg";
-import cybercomb from "../img/comp_icons/Cybercomb.jpg";
-import dexigner from "../img/comp_icons/Dexigner.jpg";
-import intellect from "../img/comp_icons/Intellect.jpg";
+// import cybercomb from "../img/comp_icons/Cybercomb.jpg";
+// import dexigner from "../img/comp_icons/Dexigner.jpg";
+// import intellect from "../img/comp_icons/Intellect.jpg";
 import web_dezigner from "../img/comp_icons/Web_Dezigner.jpg";
 import "../components/Navbar.css";
 import { useState, useEffect } from "react";
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 // import {createRoot} from 'react-dom/client';
 // import Countdown from 'react-countdown'
@@ -22,88 +28,54 @@ import { useState, useEffect } from "react";
 // )
 
 export default function useCompetitionsmodel() {
-  let earth = document.getElementById("planet");
-  window.addEventListener('scroll', function(){
-    let value = this.window.scrollY;
-    earth.style.top = 6.5 + value;
-    // console.log(value);
-  });
+
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   let navbar = document.getElementById("nav");
-
-  const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-        navbar.classList.add('hide')
-        // console.log("hide");
-      } else { // if scroll up show the navbar
-        navbar.classList.add('show')
-        navbar.classList.remove('hide')
-      }
-
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    }
-  };
+  let earth = document.getElementById("planet");
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
-
-      // cleanup function
-      return () => {
-        window.removeEventListener('scroll', controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
-  useEffect(() => {
-    if (!navbar) navbar = document.getElementById("nav");
+    AOS.init({duration: 5000})
   }, [])
   
+  
   return (
-    <div>
-      <nav class="hide" id="nav">
-        <img></img>
-        <div class="glass div " id="n1">
-          <a href="#" class="title is-6">
-            Competitions
-          </a>
-        </div>
-        <div class="glass div " id="n2">
-          <a href="#" class="title is-6">
-            Speakers
-          </a>
-        </div>
-        <div class="glass div " id="n3">
-          <a href="#" class="title is-6">
-            Throwback
-          </a>
-        </div>
-        <div class="glass div " id="n4">
-          <a href="#" class="title is-6">
-            about us
-          </a>
-        </div>
-      </nav>
+    <>
+    <Parallax pages={6}>
+    <ParallaxLayer offset={0}>
+    <div >
+       
+    {/* <div class="navbar"></div> */}
+     
       <section class="hero is-fullheight is-info">
         <div class="hero-body">
-          <img src={planet} class="planet" id="planet"></img>
+         
           {/* <div id="count"></div> */}
           <h2 class="title countdown" id="count">
             00 : 00: 00
           </h2>
         </div>
       </section>
-      <section class="section">
-        <h3 class="title has-text-centered">Compititions</h3>
-        <h5 class="subtitle has-text-centered">
+     
+      
+      
+      
+      
+    </div>
+    </ParallaxLayer>
+    <ParallaxLayer offset={0} speed={-1}>
+    <img src={planet} class="planet" id="planet"></img>
+    </ParallaxLayer>
+    <ParallaxLayer offset={1} speed={0}>
+    <section class="section sec-comp" >
+        <h3 class="title has-text-centered" data-aos="fade-up">Compititions</h3>
+        <h5 class="subtitle has-text-centered" data-aos="fade-up">
           Submit your projects before 23:59 17 February 2018
         </h5>
         <div class="container is-widescreen">
           <div class="columns">
-            <div class="column">
+            <div class="column" data-aos="slide-right" data-aos-delay="800" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -156,7 +128,7 @@ export default function useCompetitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column">
+            <div class="column" data-aos="slide-right" data-aos-delay="900" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -216,7 +188,7 @@ export default function useCompetitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column">
+            <div class="column" data-aos="slide-right" data-aos-delay="1000" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -322,7 +294,7 @@ export default function useCompetitionsmodel() {
             </div>
           </div>
           <div class="columns">
-            <div class="column">
+            <div class="column" data-aos="slide-right" data-aos-delay="800" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -373,7 +345,7 @@ export default function useCompetitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column">
+            <div class="column" data-aos="slide-right" data-aos-delay="1000" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -417,10 +389,12 @@ export default function useCompetitionsmodel() {
           </div>
         </div>
       </section>
-      <section class="section">
+    </ParallaxLayer>
+    <ParallaxLayer offset={2.7}>
+    <section class="section">
         <div>
           <div class="container">
-            <h3 class="title has-text-centered">FEATURING</h3>
+            <h3 class="title has-text-centered" data-aos="slide-right" data-aos-delay="5000">FEATURING</h3>
           </div>
           <div class="columns">
             <div class="column mt-6">
@@ -444,7 +418,9 @@ export default function useCompetitionsmodel() {
           </div>
         </div>
       </section>
-      <section class="section">
+    </ParallaxLayer>
+    <ParallaxLayer offset={3.3}>
+    <section class="section">
         <div>
           <div class="container">
             <h3 class="title has-text-centered">Throwback</h3>
@@ -530,7 +506,9 @@ export default function useCompetitionsmodel() {
           
         </div>
       </section>
-      <section>
+    </ParallaxLayer>
+    <ParallaxLayer offset={5.05}>
+    <section class="section mb-6 moremargin">
         <div class="container box box-padding">
           <div class="container has-text-centered">
             <h1 class="title is-1 has-text-weight-bold">About Us</h1>
@@ -555,7 +533,9 @@ export default function useCompetitionsmodel() {
           </div>
         </div>
       </section>
-      <div class=" cliped">
+    </ParallaxLayer>
+    <ParallaxLayer offset={5.8}>
+    <div class=" cliped">
      <footer class="footer curved">
   <div class="content has-text-centered">
     <p>Copyright © Richmond College IT Society 2018</p>
@@ -563,6 +543,34 @@ export default function useCompetitionsmodel() {
 </footer>
 <div class="box circle"></div>
     </div>
-    </div>
+    </ParallaxLayer>
+    <ParallaxLayer sticky={{ start: 0, end: 6 }}>
+    <nav class="" id="nav">
+        <img></img>
+        <div class="glass div " id="n1">
+          <a href="#" class="title is-6 nav-t">
+            Competitions
+          </a>
+        </div>
+        <div class="glass div " id="n2">
+          <a href="#" class="title is-6 nav-t">
+            Speakers
+          </a>
+        </div>
+        <div class="glass div " id="n3">
+          <a href="#" class="title is-6 nav-t">
+            Throwback
+          </a>
+        </div>
+        <div class="glass div " id="n4">
+          <a href="#" class="title is-6 nav-t">
+            about us
+          </a>
+        </div>
+      </nav>
+    </ParallaxLayer>
+</Parallax>
+    
+    </>
   );
 }
