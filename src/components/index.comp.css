@@ -4,6 +4,7 @@ html{
     background-repeat: repeat;
     background-size: 2000px;
     background-blend-mode: screen;
+    scroll-behavior: smooth;
     /* opacity: 90%; */
 }
 
@@ -197,9 +198,35 @@ html{
     bottom: -20vh ;
   }
 
+  .hover{
+    transition: 0.5s;
+  }
   .hover:hover{
     transform: scale(105%);
   }
+  .hover .title{
+    color: rgb(167, 167, 167);
+    transition: 0.5s;
+  }
+  .hover .title:hover{
+    color: rgb(255, 255, 255);
+  }
+
+  .hover .subtitle{
+    color: rgb(105, 105, 105);
+    transition: 0.5s;
+  }
+  .hover .subtitle:hover{
+    color: rgb(175, 175, 175);
+  }
+  .hover .is-rounded{
+    transition: 0.5s;
+  }
+
+  .hover .is-rounded:hover{
+    border-radius: 5%;
+  }
+
   .model-holder{
     position: sticky;
     top: 0px;

@@ -69,28 +69,28 @@ mirror: true });
      <nav class="" id="nav" data-aos="slide-right">
         <img></img>
         <div class="glass div " id="n1">
-          <a href="#" class="title is-6 nav-t">
+          <a href="#comp" class="title is-6 nav-t">
             Competitions
           </a>
         </div>
         <div class="glass div " id="n2">
-          <a href="#" class="title is-6 nav-t">
+          <a href="#speakers" class="title is-6 nav-t">
             Speakers
           </a>
         </div>
         <div class="glass div " id="n3">
-          <a href="#" class="title is-6 nav-t" data-aos="slide-right">
+          <a href="#throwbacks" class="title is-6 nav-t" data-aos="slide-right">
             Throwback
           </a>
         </div>
         <div class="glass div " id="n4">
-          <a href="#" class="title is-6 nav-t">
+          <a href="#about" class="title is-6 nav-t">
             about us
           </a>
         </div>
       </nav>
       <div>
-        <section class="hero is-fullheight is-info" data-aos="zoom-out" data-aos-mirror="true" >
+        <section id="hero" class="hero is-fullheight is-info" data-aos="zoom-out" data-aos-mirror="true" >
     <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
             <h2 class="title countdown" id="count">
@@ -99,7 +99,7 @@ mirror: true });
           </div>
         </section>
       </div>
-      <section class="section sec-comp">
+      <section id="comp" class="section sec-comp">
         <h3 class="title has-text-centered" data-aos="fade-up">
           Compititions
         </h3>
@@ -457,7 +457,7 @@ mirror: true });
           </div>
         </div>
       </section>
-      <section class="section">
+      <section id="speakers"class="section">
         <div>
           <div class="container">
             <h3
@@ -497,7 +497,7 @@ mirror: true });
           </div>
         </div>
       </section>
-      <section class="section">
+      <section id="throwbacks" class="section">
         <div>
           <div class="container">
             <h3 class="title has-text-centered" 
@@ -586,7 +586,7 @@ mirror: true });
           </div>
         </div>
       </section>
-      <section class="section mb-6 moremargin">
+      <section id="about" class="section mb-6 moremargin">
         <div class="container box box-padding">
           <div class="container has-text-centered">
             <h1 class="title is-1 has-text-weight-bold" data-aos="slide-right">About Us</h1>
