@@ -3,6 +3,7 @@ import "bulma/css/bulma.min.css";
 // import styles from "./index.comp.css";
 import "./index.comp.css";
 import planet from "../img/earth.png";
+import loader from "../img/loader2.png";
 import code_com from "../img/comp_icons/code_com.jpg";
 // import cybercomb from "../img/comp_icons/Cybercomb.jpg";
 // import dexigner from "../img/comp_icons/Dexigner.jpg";
@@ -10,10 +11,8 @@ import code_com from "../img/comp_icons/code_com.jpg";
 import web_dezigner from "../img/comp_icons/Web_Dezigner.jpg";
 import "../components/Navbar.css";
 import { useState, useEffect } from "react";
-import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
-import AOS from 'aos';
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
@@ -28,54 +27,92 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 // )
 
 export default function useCompetitionsmodel() {
-
-
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   let navbar = document.getElementById("nav");
   let earth = document.getElementById("planet");
+  let more_info = document.getElementById("more-info");
+
 
   useEffect(() => {
-    AOS.init({duration: 5000})
-  }, [])
+    AOS.init({ duration: 1000,
+    bounce:true,
+  bounceDelay: 100,
+once: false,
+mirror: true });
+  }, []);
+  setTimeout(() => {
+    // make planet inviciple in loader
+  }, );
+
+  // useEffect(() => {
+  //   if (!more_info) {
+  //     const more_info = document.getElementById("more-info");
+  //   }
+  //   addEventListener()
   
+  // }, [])
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive(!isActive);
+  }
   
+
+  
+
   return (
     <>
-    <Parallax pages={6}>
-    <ParallaxLayer offset={0}>
-    <div >
-       
-    {/* <div class="navbar"></div> */}
-     
-      <section class="hero is-fullheight is-info">
-        <div class="hero-body">
-         
-          {/* <div id="count"></div> */}
-          <h2 class="title countdown" id="count">
-            00 : 00: 00
-          </h2>
-        </div>
-      </section>
-     
-      
-      
-      
-      
+    <div class="loading hide-load">
+      <img src={loader} class="load-img"></img>
     </div>
-    </ParallaxLayer>
-    <ParallaxLayer offset={0} speed={-1}>
+     <nav class="" id="nav" data-aos="slide-right">
+        <img></img>
+        <div class="glass div " id="n1">
+          <a href="#" class="title is-6 nav-t">
+            Competitions
+          </a>
+        </div>
+        <div class="glass div " id="n2">
+          <a href="#" class="title is-6 nav-t">
+            Speakers
+          </a>
+        </div>
+        <div class="glass div " id="n3">
+          <a href="#" class="title is-6 nav-t" data-aos="slide-right">
+            Throwback
+          </a>
+        </div>
+        <div class="glass div " id="n4">
+          <a href="#" class="title is-6 nav-t">
+            about us
+          </a>
+        </div>
+      </nav>
+      <div>
+        <section class="hero is-fullheight is-info" data-aos="zoom-out" data-aos-mirror="true" >
     <img src={planet} class="planet" id="planet"></img>
-    </ParallaxLayer>
-    <ParallaxLayer offset={1} speed={0}>
-    <section class="section sec-comp" >
-        <h3 class="title has-text-centered" data-aos="fade-up">Compititions</h3>
+          <div class="hero-body">
+            <h2 class="title countdown" id="count">
+              00 : 00: 00
+            </h2>
+          </div>
+        </section>
+      </div>
+      <section class="section sec-comp">
+        <h3 class="title has-text-centered" data-aos="fade-up">
+          Compititions
+        </h3>
         <h5 class="subtitle has-text-centered" data-aos="fade-up">
           Submit your projects before 23:59 17 February 2018
         </h5>
         <div class="container is-widescreen">
           <div class="columns">
-            <div class="column" data-aos="slide-right" data-aos-delay="800" data-aos-duration="1000">
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            >
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -92,15 +129,15 @@ export default function useCompetitionsmodel() {
                   <div class="content">Programming competition</div>
                 </div>
                 <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
+                  <a href="#"  class="card-footer-item">
                     Register
                   </a>
-                  <a href="#" class="card-footer-item">
+                  <button href="#" onClick={handleClick}  id="more-info" class="card-footer-item">
                     More Info
-                  </a>
+                  </button>
                 </footer>
               </div>
-              <div class="modal ">
+              <div class="model">
                 <div class="modal-background"></div>
                 <div class="modal-card">
                   <header class="modal-card-head">
@@ -118,7 +155,9 @@ export default function useCompetitionsmodel() {
                     <h6 class="subtitle is-6 black-text">
                       A solution for a common issue of your school
                     </h6>
-                    <h6 class="subtitle is-4 black-text">Programming languages -</h6>
+                    <h6 class="subtitle is-4 black-text">
+                      Programming languages -
+                    </h6>
                     <ul>
                       <li>• Coffee</li>
                       <li>• Tea</li>
@@ -128,7 +167,11 @@ export default function useCompetitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column" data-aos="slide-right" data-aos-delay="900" data-aos-duration="1000">
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            >
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -175,7 +218,9 @@ export default function useCompetitionsmodel() {
                     <h6 class="subtitle is-6 black-text">
                       A Website To Represent Your School
                     </h6>
-                    <h6 class="subtitle is-4 black-text">Programming languages -</h6>
+                    <h6 class="subtitle is-4 black-text">
+                      Programming languages -
+                    </h6>
                     <ul>
                       <li>• HTML</li>
                       <li>• Javascript</li>
@@ -188,7 +233,11 @@ export default function useCompetitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column" data-aos="slide-right" data-aos-delay="1000" data-aos-duration="1000">
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            >
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -294,7 +343,11 @@ export default function useCompetitionsmodel() {
             </div>
           </div>
           <div class="columns">
-            <div class="column" data-aos="slide-right" data-aos-delay="800" data-aos-duration="1000">
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            >
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -329,11 +382,14 @@ export default function useCompetitionsmodel() {
                   <section class="modal-card-body">
                     <img src={planet}></img>
                     <p>
-                    Creation of a realistic, mosaic, exquisite and creative graphic design under the title we provided using the softwares designated by us is your purpose in this competition.
+                      Creation of a realistic, mosaic, exquisite and creative
+                      graphic design under the title we provided using the
+                      softwares designated by us is your purpose in this
+                      competition.
                     </p>
                     <h6 class="subtitle is-4">Topic -</h6>
                     <h6 class="subtitle is-6">
-                    Nature vs Technology [Wallpaper or a banner]
+                      Nature vs Technology [Wallpaper or a banner]
                     </h6>
                     <h6 class="subtitle is-4">Softwares</h6>
                     <ul>
@@ -345,7 +401,11 @@ export default function useCompetitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column" data-aos="slide-right" data-aos-delay="1000" data-aos-duration="1000">
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            >
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -378,199 +438,188 @@ export default function useCompetitionsmodel() {
                     <button class="delete" aria-label="close"></button>
                   </header>
                   <section class="modal-card-body">
-                    <img
-                    src={planet}>
-                    </img>
-                    <p class="subtitle is-5 black-text">For the students who got a wise knowledge in the ICT field. This competition will be held at the ICT Day without any registrations, anyone can participate.</p>
+                    <img src={planet}></img>
+                    <p class="subtitle is-5 black-text">
+                      For the students who got a wise knowledge in the ICT
+                      field. This competition will be held at the ICT Day
+                      without any registrations, anyone can participate.
+                    </p>
                   </section>
                 </div>
               </div>
             </div>
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            >
+            </div>
           </div>
         </div>
       </section>
-    </ParallaxLayer>
-    <ParallaxLayer offset={2.7}>
-    <section class="section">
+      <section class="section">
         <div>
           <div class="container">
-            <h3 class="title has-text-centered" data-aos="slide-right" data-aos-delay="5000">FEATURING</h3>
+            <h3
+              class="title has-text-centered"
+              data-aos="slide-right"
+            >
+              FEATURING
+            </h3>
           </div>
           <div class="columns">
-            <div class="column mt-6">
-            <figure class="card-image has-text-centered is-128x128">
-  <img class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png"></img>
-</figure>
-<div class="media-content has-text-centered">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
+            <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
+              <div class="hover"><figure class="card-image has-text-centered is-128x128">
+                <img
+                  class="is-rounded"
+                  src="https://bulma.io/images/placeholders/256x256.png"
+                ></img>
+              </figure>
+              <div class="media-content has-text-centered">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div></div>
             </div>
-            <div class="column mt-6">
-            <figure class="card-image has-text-centered is-128x128 is-square">
-  <img class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png"></img>
-</figure>
-<div class="media-content has-text-centered">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
-            </div>
+            <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
+            <div class="hover">
+              <figure class="card-image has-text-centered is-128x128 is-square">
+                <img
+                  class="is-rounded"
+                  src="https://bulma.io/images/placeholders/256x256.png"
+                ></img>
+              </figure>
+              <div class="media-content has-text-centered">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+              </div>
+            </div> 
           </div>
         </div>
       </section>
-    </ParallaxLayer>
-    <ParallaxLayer offset={3.3}>
-    <section class="section">
+      <section class="section">
         <div>
           <div class="container">
-            <h3 class="title has-text-centered">Throwback</h3>
+            <h3 class="title has-text-centered" 
+            data-aos="slide-right">
+              Throwback</h3>
             <div class="columns">
               <div class="column mr-6">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  ></img>
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Kngine'17</p>
-                    <p class="subtitle is-6">To Infinity and Beyond</p>
+                <div class="card" data-aos="fade-up" data-aos-offset="500">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img
+                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        alt="Placeholder image"
+                      ></img>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Kngine'17</p>
+                        <p class="subtitle is-6">To Infinity and Beyond</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img
+                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        alt="Placeholder image"
+                      ></img>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Kngine'13</p>
+                        <p class="subtitle is-6">4th Generation of IT</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card mt-6">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  ></img>
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Kngine'13</p>
-                    <p class="subtitle is-6">4th Generation of IT</p>
+              <div class="column">
+                <div class="card" data-aos="fade-up" data-aos-offset="500">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img
+                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        alt="Placeholder image"
+                      ></img>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Kngine'15</p>
+                        <p class="subtitle is-6">The ultimatum of IT</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img
+                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        alt="Placeholder image"
+                      ></img>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Kngine'12</p>
+                        <p class="subtitle is-6">
+                          For The Next Generation Of IT
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  ></img>
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Kngine'15</p>
-                    <p class="subtitle is-6">The ultimatum of IT</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mt-6">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  ></img>
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Kngine'12</p>
-                    <p class="subtitle is-6">For The Next Generation Of IT</p>
-                  </div>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
-          </div>
-          
         </div>
       </section>
-    </ParallaxLayer>
-    <ParallaxLayer offset={5.05}>
-    <section class="section mb-6 moremargin">
+      <section class="section mb-6 moremargin">
         <div class="container box box-padding">
           <div class="container has-text-centered">
-            <h1 class="title is-1 has-text-weight-bold">About Us</h1>
+            <h1 class="title is-1 has-text-weight-bold" data-aos="slide-right">About Us</h1>
           </div>
           <div class="container is-fluid">
-              <p class="white-text mt-6 is-size-4 has-text-justified">
-                RITS, Richmond College IT Society inaugurated few decades ago,
-                has now dominated every school IT Societies around the island,
-                doing an evolutionary change in the horizon of the school ICT
-                field. RITS has shown their exellence in the vast technological
-                field by competing with all the leading ICT societies in the
-                schools. The Richmond College IT Society has now developed with
-                the newest and timely technology and knowledge to achieve any
-                target combined with our spirit and the huge co-operation of
-                former members and teachers. The next phase of our annual
-                celebrations; The Knowledge Engine 2018 comes out with a
-                comprehensive conecpt this time. KNGINE’18 stands with the
-                professional ICT knowledge and the skills to be shared with all
-                the master IT minds around us and it has become the reflection
-                and the unrivalled nobilty of our ICT Society.
-              </p>
+            <p class="white-text mt-6 is-size-4 has-text-justified" data-aos="fade-up" data-aos-offset="500" data-aos-duration="2000">
+              RITS, Richmond College IT Society inaugurated few decades ago, has
+              now dominated every school IT Societies around the island, doing
+              an evolutionary change in the horizon of the school ICT field.
+              RITS has shown their exellence in the vast technological field by
+              competing with all the leading ICT societies in the schools. The
+              Richmond College IT Society has now developed with the newest and
+              timely technology and knowledge to achieve any target combined
+              with our spirit and the huge co-operation of former members and
+              teachers. The next phase of our annual celebrations; The Knowledge
+              Engine 2018 comes out with a comprehensive conecpt this time.
+              KNGINE’18 stands with the professional ICT knowledge and the
+              skills to be shared with all the master IT minds around us and it
+              has become the reflection and the unrivalled nobilty of our ICT
+              Society.
+            </p>
           </div>
         </div>
-      </section>
-    </ParallaxLayer>
-    <ParallaxLayer offset={5.8}>
-    <div class=" cliped">
-     <footer class="footer curved">
-  <div class="content has-text-centered">
-    <p>Copyright © Richmond College IT Society 2018</p>
-  </div>
-</footer>
-<div class="box circle"></div>
-    </div>
-    </ParallaxLayer>
-    <ParallaxLayer sticky={{ start: 0, end: 6 }}>
-    <nav class="" id="nav">
-        <img></img>
-        <div class="glass div " id="n1">
-          <a href="#" class="title is-6 nav-t">
-            Competitions
-          </a>
-        </div>
-        <div class="glass div " id="n2">
-          <a href="#" class="title is-6 nav-t">
-            Speakers
-          </a>
-        </div>
-        <div class="glass div " id="n3">
-          <a href="#" class="title is-6 nav-t">
-            Throwback
-          </a>
-        </div>
-        <div class="glass div " id="n4">
-          <a href="#" class="title is-6 nav-t">
-            about us
-          </a>
-        </div>
-      </nav>
-    </ParallaxLayer>
-</Parallax>
-    
+      </section>{" "}
+      <div class=" cliped" data-aos="zoom-out">
+        <footer class="footer curved">
+          <div class="content has-text-centered">
+            <p>Copyright © Richmond College IT Society 2018</p>
+          </div>
+        </footer>
+        <div class="box circle"  ></div>
+      </div>
+     
     </>
   );
 }
