@@ -7,7 +7,28 @@ html{
     scroll-behavior: smooth;
     /* opacity: 90%; */
 }
+::-webkit-scrollbar {
+  width: 5px;
+  transition: 1s;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(45, 45, 45); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(192, 192, 192); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+  /* width: 6px;  */
+}
 
 .loading{
   background-color: black;
@@ -62,8 +83,64 @@ html{
   z-index: 10;
 }
 
-/* planet */
 
+.breaker{
+  border-top: 3px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  width: 90vw;
+  position: relative;
+  left: 5vw;
+  z-index: 100;
+}
+
+/* planet */
+.full{
+  position: absolute;
+  z-index: 2;
+  /* top: 130vh; */
+  left: 50vw;
+  height: 100vh;
+  width: 100vw;
+  animation: planet_motion 7s infinite;
+}
+
+.feat-full{
+  padding-top: 55%;
+  left: -5vw;
+}
+
+.throw-full{
+  padding-top: 120%;
+  left: 15vw;
+  /* filter: blur(2px); */
+}
+.abt-full{
+  padding-top: 210%;
+  left: 60vw;
+  filter: blur(5px);
+}
+
+
+.full img{
+  height: 100vh;
+}
+
+.feat-full img{
+  height: 50vh;
+}
+
+.throw-full img{
+  height: 90vh;
+}
+.abt-full img{
+  height: 50vh;
+}
+
+@keyframes planet_motion {
+  0%{top: 155vh;}
+  50%{top: 160vh;}
+  100%{top: 155vh;}
+}
 .planet{
     position: absolute;
     right: -10vw;
@@ -245,6 +322,8 @@ html{
   .model-background{
     background-color: black;
   }
+
+
 
  /* dev zone */
 
