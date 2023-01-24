@@ -3,6 +3,10 @@ import React from "react";
 // import styles from "./index.comp.css";
 import "./index.comp.css";
 import planet from "../img/earth.png";
+import planet_dup from "../img/planet_dup.png";
+import rock from "../img/rock.png";
+import ISS from "../img/ISS.png";
+import station from "../img/station.png";
 import loader from "../img/loader2.png";
 import code_com from "../img/comp_icons/code_com.jpg";
 // import cybercomb from "../img/comp_icons/Cybercomb.jpg";
@@ -70,10 +74,22 @@ export default function useCompetitionsmodel() {
 
   return (
     <>
-      <div class="loading hide-load">
-        <img src={loader} class="load-img"></img>
-      </div>
-      <nav class="" id="nav" data-aos="slide-right">
+    <div class="full comp-full">
+     <img src={planet_dup} data-aos="zoom-out-left" data-aos-duration="5000"></img>
+     </div>
+     <div class="full feat-full">
+     <img src={rock} data-aos="zoom-out-left" data-aos-duration="5000"></img>
+     </div>
+     <div class="full throw-full">
+     <img src={station} data-aos="zoom-out-left" data-aos-duration="5000"></img>
+     </div>
+     <div class="full abt-full">
+     <img src={ISS} data-aos="zoom-out-left" data-aos-duration="5000"></img>
+     </div>
+    <div class="loading hide-load">
+      <img src={loader} class="load-img" ></img>
+    </div>
+     <nav class="" id="nav" data-aos="slide-right">
         <img></img>
         <div class="glass div " id="n1">
           <a href="#comp" class="title is-6 nav-t">
@@ -98,15 +114,16 @@ export default function useCompetitionsmodel() {
       </nav>
       <div>
         <section id="hero" class="hero is-fullheight is-info" data-aos="zoom-out" data-aos-mirror="true" >
-          <img src={planet} class="planet" id="planet"></img>
+        <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
             <h2 class="title countdown" id="count">
               00 : 00: 00
             </h2>
           </div>
         </section>
+        
       </div>
-      <section id="comp" class="section sec-comp">
+      <section id="comp" class="section sec-comp"  data-aos="zoom-out" data-aos-mirror="true" >
         <h3 class="title has-text-centered" data-aos="fade-up">
           Compititions
         </h3>
@@ -465,7 +482,8 @@ export default function useCompetitionsmodel() {
           </div>
         </div>
       </section>
-      <section id="speakers" class="section">
+      <hr class="breaker" data-aos="zoom-in"></hr>
+      <section id="speakers"class="section"  data-aos="zoom-out" data-aos-mirror="true" >
         <div>
           <div class="container">
             <h3
@@ -505,7 +523,8 @@ export default function useCompetitionsmodel() {
           </div>
         </div>
       </section>
-      <section id="throwbacks" class="section">
+      <hr class="breaker" data-aos="zoom-in"></hr>
+      <section id="throwbacks" class="section"  data-aos="zoom-out" data-aos-mirror="true" >
         <div>
           <div class="container">
             <h3 class="title has-text-centered"
@@ -594,7 +613,8 @@ export default function useCompetitionsmodel() {
           </div>
         </div>
       </section>
-      <section id="about" class="section mb-6 moremargin">
+      <hr class="breaker" data-aos="zoom-in"></hr>
+      <section id="about" class="section mb-6 moremargin"  data-aos="zoom-out" data-aos-mirror="true" >
         <div class="container box box-padding">
           <div class="container has-text-centered">
             <h1 class="title is-1 has-text-weight-bold" data-aos="slide-right">About Us</h1>
@@ -618,7 +638,8 @@ export default function useCompetitionsmodel() {
             </p>
           </div>
         </div>
-      </section>{" "}
+      </section>
+      <hr class="breaker" data-aos="zoom-in"></hr>
       <div class=" cliped" data-aos="zoom-out">
         <footer class="footer curved">
           <div class="content has-text-centered">
