@@ -1,5 +1,5 @@
 import React from "react";
-import "bulma/css/bulma.min.css";
+// import "bulma/css/bulma.min.css";
 // import styles from "./index.comp.css";
 import "./index.comp.css";
 import planet from "../img/earth.png";
@@ -35,38 +35,45 @@ export default function useCompetitionsmodel() {
 
 
   useEffect(() => {
-    AOS.init({ duration: 1000,
-    bounce:true,
-  bounceDelay: 100,
-once: false,
-mirror: true });
+    AOS.init({
+      duration: 1000,
+      bounce: true,
+      bounceDelay: 100,
+      once: false,
+      mirror: true
+    });
   }, []);
   setTimeout(() => {
     // make planet inviciple in loader
-  }, );
+  });
 
   // useEffect(() => {
   //   if (!more_info) {
   //     const more_info = document.getElementById("more-info");
   //   }
   //   addEventListener()
-  
+
   // }, [])
-  const [isActive, setIsActive] = useState(false);
+
+  const [modalOpen, setModalOpen] = useState("");
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    setModalOpen('is-active');
   }
-  
 
-  
+  const handleClose = () => {
+    setModalOpen('');
+  }
+
+
+
 
   return (
     <>
-    <div class="loading hide-load">
-      <img src={loader} class="load-img"></img>
-    </div>
-     <nav class="" id="nav" data-aos="slide-right">
+      <div class="loading hide-load">
+        <img src={loader} class="load-img"></img>
+      </div>
+      <nav class="" id="nav" data-aos="slide-right">
         <img></img>
         <div class="glass div " id="n1">
           <a href="#comp" class="title is-6 nav-t">
@@ -91,7 +98,7 @@ mirror: true });
       </nav>
       <div>
         <section id="hero" class="hero is-fullheight is-info" data-aos="zoom-out" data-aos-mirror="true" >
-    <img src={planet} class="planet" id="planet"></img>
+          <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
             <h2 class="title countdown" id="count">
               00 : 00: 00
@@ -107,6 +114,35 @@ mirror: true });
           Submit your projects before 23:59 17 February 2018
         </h5>
         <div class="container is-widescreen">
+          <div class={`modal ${modalOpen}`}>
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Code_com</p>
+                <button class="delete" onClick={handleClose} aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <img src={planet}></img>
+                <p>
+                  Coding of a program that can make a solution to the title
+                  of a substantive issue. The program that gives the best
+                  solution will be the winning program.
+                </p>
+                <h6 class="subtitle is-4 mt-5 black-text">Topic -</h6>
+                <h6 class="subtitle is-6 black-text">
+                  A solution for a common issue of your school
+                </h6>
+                <h6 class="subtitle is-4 black-text">
+                  Programming languages -
+                </h6>
+                <ul>
+                  <li>• Coffee</li>
+                  <li>• Tea</li>
+                  <li>• Milk</li>
+                </ul>
+              </section>
+            </div>
+          </div>
           <div class="columns">
             <div
               class="column"
@@ -129,43 +165,15 @@ mirror: true });
                   <div class="content">Programming competition</div>
                 </div>
                 <footer class="card-footer">
-                  <a href="#"  class="card-footer-item">
+                  <a href="#" class="card-footer-item">
                     Register
                   </a>
-                  <button href="#" onClick={handleClick}  id="more-info" class="card-footer-item">
+                  <a onClick={handleClick} class="card-footer-item">
                     More Info
-                  </button>
+                  </a>
                 </footer>
               </div>
-              <div class="model">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                  <header class="modal-card-head">
-                    <p class="modal-card-title">Code_com</p>
-                    <button class="delete" aria-label="close"></button>
-                  </header>
-                  <section class="modal-card-body">
-                    <img src={planet}></img>
-                    <p>
-                      Coding of a program that can make a solution to the title
-                      of a substantive issue. The program that gives the best
-                      solution will be the winning program.
-                    </p>
-                    <h6 class="subtitle is-4 mt-5 black-text">Topic -</h6>
-                    <h6 class="subtitle is-6 black-text">
-                      A solution for a common issue of your school
-                    </h6>
-                    <h6 class="subtitle is-4 black-text">
-                      Programming languages -
-                    </h6>
-                    <ul>
-                      <li>• Coffee</li>
-                      <li>• Tea</li>
-                      <li>• Milk</li>
-                    </ul>
-                  </section>
-                </div>
-              </div>
+
             </div>
             <div
               class="column"
@@ -457,7 +465,7 @@ mirror: true });
           </div>
         </div>
       </section>
-      <section id="speakers"class="section">
+      <section id="speakers" class="section">
         <div>
           <div class="container">
             <h3
@@ -475,33 +483,33 @@ mirror: true });
                   src="https://bulma.io/images/placeholders/256x256.png"
                 ></img>
               </figure>
-              <div class="media-content has-text-centered">
-                <p class="title is-4">John Smith</p>
-                <p class="subtitle is-6">@johnsmith</p>
-              </div></div>
+                <div class="media-content has-text-centered">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div></div>
             </div>
             <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
-            <div class="hover">
-              <figure class="card-image has-text-centered is-128x128 is-square">
-                <img
-                  class="is-rounded"
-                  src="https://bulma.io/images/placeholders/256x256.png"
-                ></img>
-              </figure>
-              <div class="media-content has-text-centered">
-                <p class="title is-4">John Smith</p>
-                <p class="subtitle is-6">@johnsmith</p>
+              <div class="hover">
+                <figure class="card-image has-text-centered is-128x128 is-square">
+                  <img
+                    class="is-rounded"
+                    src="https://bulma.io/images/placeholders/256x256.png"
+                  ></img>
+                </figure>
+                <div class="media-content has-text-centered">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
               </div>
-              </div>
-            </div> 
+            </div>
           </div>
         </div>
       </section>
       <section id="throwbacks" class="section">
         <div>
           <div class="container">
-            <h3 class="title has-text-centered" 
-            data-aos="slide-right">
+            <h3 class="title has-text-centered"
+              data-aos="slide-right">
               Throwback</h3>
             <div class="columns">
               <div class="column mr-6">
@@ -619,7 +627,7 @@ mirror: true });
         </footer>
         <div class="box circle"  ></div>
       </div>
-     
+
     </>
   );
 }
