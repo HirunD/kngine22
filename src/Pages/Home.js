@@ -1,5 +1,5 @@
 import React from 'react';
-import "bulma/css/bulma.min.css";
+// import "bulma/css/bulma.min.css";
 // import planet from '../img/planet.png'
 // import Hero from "../components/hero";
 import Compititionsmodel from "../components/competitions"
@@ -12,9 +12,9 @@ import Navbar from '../components/Navbar';
 export default function homePage() {
   return (
     <>
-    {/* <Navbar></Navbar> */}
-    {/* <Hero></Hero> */}
-    <Compititionsmodel></Compititionsmodel>
+      {/* <Navbar></Navbar> */}
+      {/* <Hero></Hero> */}
+      <Compititionsmodel></Compititionsmodel>
     </>
   )
 }
