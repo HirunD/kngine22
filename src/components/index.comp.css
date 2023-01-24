@@ -304,20 +304,7 @@ html{
     border-radius: 5%;
   }
 
-  .model-holder{
-    position: sticky;
-    top: 0px;
-    height: 100vh;
-    z-index: 130;
-  }
-/* 
-  .model {
-    position: sticky;
-    top: 0px;
-    height: 100vh;
-    width: 100vw;
-    z-index: 30;
-  } */
+
 
   .model-background{
     background-color: black;
@@ -326,7 +313,3 @@ html{
 
 
  /* dev zone */
-
-.model{
-  display: none;
-}

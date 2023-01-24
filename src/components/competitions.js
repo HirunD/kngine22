@@ -192,36 +192,7 @@ export default function useCompetitionsmodel() {
               </div>
 
             </div>
-            <div
-              class="column"
-              data-aos="slide-right"
-              data-aos-duration="1000"
-            >
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src={web_dezigner} alt="Placeholder image"></img>
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4">web deZign</p>
-                    </div>
-                  </div>
-
-                  <div class="content">Web Designing competition</div>
-                </div>
-                <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
-                    Register
-                  </a>
-                  <a href="#" class="card-footer-item">
-                    More Info
-                  </a>
-                </footer>
-              </div>
-              <div class="modal">
+            <div class="modal ">
                 <div class="modal-background"></div>
                 <div class="modal-card">
                   <header class="modal-card-head">
@@ -257,6 +228,36 @@ export default function useCompetitionsmodel() {
                   </section>
                 </div>
               </div>
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            >
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src={web_dezigner} alt="Placeholder image"></img>
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">web deZign</p>
+                    </div>
+                  </div>
+
+                  <div class="content">Web Designing competition</div>
+                </div>
+                <footer class="card-footer">
+                  <a href="#" class="card-footer-item">
+                    Register
+                  </a>
+                  <a href="#" class="card-footer-item">
+                    More Info
+                  </a>
+                </footer>
+              </div>
+              
             </div>
             <div
               class="column"
