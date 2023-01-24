@@ -17,6 +17,7 @@ import "../components/Navbar.css";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useCountdown } from "../hooks/useCountdown";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
@@ -36,6 +37,9 @@ export default function useCompetitionsmodel() {
   let navbar = document.getElementById("nav");
   let earth = document.getElementById("planet");
   let more_info = document.getElementById("more-info");
+
+  const targetDate = new Date('March 01, 2023 09:30:00')
+  const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
 
   useEffect(() => {
@@ -117,7 +121,7 @@ export default function useCompetitionsmodel() {
         <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
             <h2 class="title countdown" id="count">
-              00 : 00: 00
+              {days} : {hours} : {minutes} : {seconds}
             </h2>
           </div>
         </section>
