@@ -4,6 +4,8 @@ import React from 'react';
 // import Hero from "../components/hero";
 import Compititionsmodel from "../components/competitions"
 import Navbar from '../components/Navbar';
+import '../fonts/Centuri.ttf';
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');

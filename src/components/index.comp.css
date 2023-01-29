@@ -7,6 +7,11 @@ html{
     scroll-behavior: smooth;
     /* opacity: 90%; */
 }
+@font-face {
+  font-family: "Centuri";   /*Can be any text*/
+  src: local("Centuri"),
+    url("../../src/fonts/Centuri.ttf") format("truetype");
+}
 ::-webkit-scrollbar {
   width: 5px;
   transition: 1s;
@@ -79,7 +84,7 @@ html{
 
 .sec-comp{
   background-color: rgba(0, 0, 0, 0.762);
-  box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.834);
+  box-shadow: 0 0 150px 150px rgba(0, 0, 0, 0.834);
   z-index: 10;
 }
 
@@ -92,9 +97,37 @@ html{
   left: 5vw;
   z-index: 100;
 }
+.breaker2{
+  border-top: 3px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  width: 10vw;
+  top: 2vh;
+  position: relative;
+  left: 18vw;
+  z-index: 0;
+}
+.breaker3{
+  border-top: 3px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  width: 10vw;
+  position: relative;
+  left: 31vw;
+  top: -1.5vh;
+  z-index: 0;
+}
 
 /* planet */
 .full{
+  position: absolute;
+  z-index: 2;
+  /* top: 130vh; */
+  left: 50vw;
+  height: 100vh;
+  width: 100vw;
+  animation: planet_motion 7s infinite;
+}
+
+.comp-full{
   position: absolute;
   z-index: 2;
   /* top: 130vh; */
@@ -142,10 +175,10 @@ html{
   100%{top: 155vh;}
 }
 .planet{
-    position: absolute;
+    position: fixed;
     right: -10vw;
     width: 70vw;
-    top: 6.5vw;
+    bottom: 4.5vw;
     animation: planetery 4s infinite;
     opacity: 70%;
     transition: 3s;
@@ -153,26 +186,36 @@ html{
   }
 
   @keyframes planetery {
-    0%{top: 6vw;}
-    50%{top: 6.5vw;}
-    100%{top: 6vw;}
+    0%{bottom: -5vw;}
+    50%{bottom: -8vw;}
+    100%{bottom: -5vw;}
   }
 
   .planet:hover{
     opacity: 100%;
     transform: scale(110%);
   }
-
   .countdown{
-    font-size: 9rem;
     position: relative;
-    right: -5vw;
-    top: 0vw;
+    /* right: -5vw; */
+    top: -10vw;
     z-index: 20;
-    transition: 5s;
+    /* transition: 5s; */
     color: rgba(255, 255, 255, 0.326);
+    font-family: "Centuri";
+    font-size: 5rem;
   }
 
+  .countdown-mobile{
+    position: relative;
+    /* right: -5vw; */
+    top: -10vw;
+    z-index: 20;
+    /* transition: 5s; */
+    color: rgba(255, 255, 255, 0.326);
+    font-family: "Centuri";
+    font-size: 5rem;
+  }
 /* .planet:hover + .countdown{
   transform: skewY(-20deg);
 } */
@@ -187,17 +230,20 @@ html{
     background-image: black;
     backdrop-filter: blur(5px);
     position: relative;
-    z-index: 100;
+    z-index: 50;
     /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.399); */
   }
 
   .card{
-    background-color: rgba(255, 255, 255, 0.115);
+    background-color: rgba(19, 19, 19, 0.544);
     backdrop-filter: blur(5px);
     color: black;
+    transition: 0.25s;
     border-radius: 2%;
   }
-
+.card:hover{
+  background-color: rgba(63, 63, 63, 0.544);
+}
   .title{
     color: white;
   }
@@ -221,12 +267,12 @@ html{
   }
 
   .curved{
-    width: 120%;
+    border-end-start-radius: 0px;
+    border-end-end-radius: 0px;
     margin: 0 auto;
     border-radius: 100%;
     position: relative;
-    bottom: -5vw;
-    left: -10vw;  
+    left: -5vw;  
     margin: auto;
     /* box-shadow: 10px 10px 10px 10px; */
     z-index: 20;
@@ -310,6 +356,186 @@ html{
     background-color: black;
   }
 
+/* .card:has(.comp) .card-image{
+  background-color: rgba(0, 0, 0, 0.521);
+} */
+
+.image.is-4by3{
+  background:  radial-gradient(circle, rgb(0, 0, 15) 0%, rgba(0, 0, 0, 0.366) 100%);
+}
+
+.image.is-4by3 img{
+  height: 90%;
+  width: 90%;
+  padding-left: 10%; 
+  padding-top: 10%; 
+  transition: 1s;
+  /* height: 100px; */
+}
+
+.image.is-4by3 img:hover{
+  height: 100%;
+  width: 100%;
+  transform: rotate(2deg);
+  padding-left: 0%; 
+  padding-top: 0%; 
+}
+
+.model-holder{
+  position: fixed;
+  z-index: 120;
+}
+.navbar{
+  display: none;
+}
+.countdown-mobile{
+  display: none;
+}
+
+@media (max-width: 1114px) {
+  .countdown{
+    font-size: 50px;
+    left: 10vw;
+  }
+  
+.comp-full{
+  left: 65vw;
+}
+
+.feat-full{
+  left: -20vw;
+}
+
+.navbar{
+  display: none;
+}
+}
 
 
- /* dev zone */
+@media (max-width:800px) {
+ 
+  #nav{
+    display: none;
+  }
+  .navbar{
+    display: inherit;
+  }
+
+  .navbar{
+    backdrop-filter: blur(5px);
+    background-color: rgba(105, 105, 105, 0.082);
+    position: relative;
+  }
+  .navbar.is-fixed-bottom, .navbar.is-fixed-top{
+    z-index: 100;
+  }
+.navbar-menu{
+  background-color: rgba(0, 0, 0, 0.082);
+  animation: shownav 6s;
+}
+
+@keyframes shownav {
+  0%{top: 0px;}
+  50%{top: 10px;}
+  100%{top: 0px;}
+}
+  .navbar-item{
+    height: 10vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.203);
+  }
+
+  .navbar-burger{
+    left: 0px;
+    margin-left: 0px;
+    color: white;
+  }
+
+  .navbar{
+    background: rgba(255, 255, 255, 0);
+  }
+  .navbar-menu{
+    height: 200vh;
+    background-color: rgba(78, 78, 78, 0.203);
+  }
+
+  .navbar-brand{
+    background-color: rgba(0, 0, 0, 0.299);
+    backdrop-filter: blur(15px);
+  }
+}
+
+
+@media (max-width: 385px) {
+  .countdown{
+    display: none;
+  }
+  .countdown-mobile{
+    font-size: 50px;
+    display: inherit;
+    font-size: 50px;
+    left: 10vw;
+  }
+  .countdown-mobile{
+    font-size: 105px;
+    left: 10vw;
+  }
+
+  .planet{
+    width: 70vh;
+    height: 50vh;
+    opacity: 100%;
+    right: -180px;
+  }
+  
+.comp-full{
+  left: 35vw;
+}
+
+.feat-full{
+  padding-top: 650%;
+  left: -50vw;
+}
+.throw-full {
+  padding-top: 880%;
+  height: 9vh;
+  width: 90vh;
+}
+.abt-full {
+  padding-top: 1200%;
+  padding-right: 20vw;
+}
+.is-size-4{
+  font-size: 1rem !important;
+}
+
+.container .is-fluid{
+  margin-left: -10vw !important;
+  margin-right: -10vw !important;
+  width: 95vw;
+}
+.navbar{
+  display: none;
+}
+.curved{
+  width: 120%;
+  margin: 0 auto;
+  border-radius: 100%;
+  position: relative;
+  bottom: -40vw;
+  left: -10vw;  
+  margin: auto;
+  /* box-shadow: 10px 10px 10px 10px; */
+  z-index: 20;
+  /* display: none; */
+
+}
+}
+
+@media (max-width:1000px) {
+  .curved{
+    border-end-start-radius: 0px;
+    border-end-end-radius: 0px;
+    height: 10vh;
+  }
+}
