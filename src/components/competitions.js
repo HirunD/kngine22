@@ -13,7 +13,12 @@ import cybercomb from "../img/comp_icons/Cybercomb.png";
 import dexigner from "../img/comp_icons/Dexigner.png";
 import intellect from "../img/comp_icons/Intellect.png";
 import web_dezigner from "../img/comp_icons/Web_Dezigner.png";
-import competitions from "../img/navbar_icons/competitions.png";
+import kngine from "../img/kngine_22.png";
+import kngine17 from "../img/throwback/kngine17.jpg";
+import kngine15 from "../img/throwback/kngine15.jpg";
+import kngine13 from "../img/throwback/kngine13.jpg";
+import kngine12 from "../img/throwback/kngine12.jpg";
+
 import speakers from "../img/comp_icons/Cybercomb.png";
 import throwbacks from "../img/comp_icons/Dexigner.png";
 import about from "../img/comp_icons/Intellect.png";
@@ -46,15 +51,9 @@ export default function useCompetitionsmodel() {
   const targetDate = new Date("March 09, 2023 09:30:00");
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      bounce: true,
-      bounceDelay: 100,
-      once: false,
-      mirror: true,
-    });
-  }, []);
+  // useEffect(() => {
+    
+  // }, []);
   setTimeout(() => {
     // make planet inviciple in loader
   });
@@ -128,6 +127,31 @@ export default function useCompetitionsmodel() {
     setModalOpennav(" ");
   };
 
+  
+  const [loadervisible, setloadervisible] = useState("");
+  useEffect(() => {
+    setTimeout(() => {
+      setloadervisible("hide-load");
+    }, 2000);
+  }, )
+
+  useEffect(() => {
+    
+    const onScroll = (event) =>{
+      if (event.target.scrollingElement.scrollTop > 30) {
+      AOS.init({
+        duration: 1000,
+      });
+      }else{
+        console.log("less than ");
+      }
+    }
+    document.addEventListener("scroll", onScroll)
+  }, )
+  
+  
+  
+
   return (
     <>
       <div class="full comp-full">
@@ -150,7 +174,7 @@ export default function useCompetitionsmodel() {
       <div class="full abt-full">
         <img src={ISS} data-aos="zoom-out-left" data-aos-duration="5000"></img>
       </div>
-      <div class="loading hide-load">
+      <div class={`loading ${loadervisible}`}>
         <img
           src={loader}
           class="load-img"
@@ -227,6 +251,7 @@ export default function useCompetitionsmodel() {
           data-aos="zoom-out"
           data-aos-mirror="true"
         >
+          <img  src={kngine} class="kngine"></img>
           <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
             <div class="columns ">
@@ -266,11 +291,11 @@ export default function useCompetitionsmodel() {
                 substantive issue. The program that gives the best solution will
                 be the winning program.
               </p>
-              <h6 class="subtitle is-4 mt-5 black-text">Topic -</h6>
-              <h6 class="subtitle is-6 black-text">
+              <h6 class="subtitle is-4 mt-5  ">Topic -</h6>
+              <h6 class="subtitle is-6  ">
                 A solution for a common issue of your school
               </h6>
-              <h6 class="subtitle is-4 black-text">Programming languages -</h6>
+              <h6 class="subtitle is-4  ">Programming languages -</h6>
               <ul>
                 <li>• Coffee</li>
                 <li>• Tea</li>
@@ -300,11 +325,11 @@ export default function useCompetitionsmodel() {
                 The creation that is most relevant to the topic and most
                 creative will be the winning creation.
               </p>
-              <h6 class="subtitle is-4 mt-4 black-text">Topic -</h6>
-              <h6 class="subtitle is-6 black-text">
+              <h6 class="subtitle is-4 mt-4  ">Topic -</h6>
+              <h6 class="subtitle is-6  ">
                 A Website To Represent Your School
               </h6>
-              <h6 class="subtitle is-4 black-text">Programming languages -</h6>
+              <h6 class="subtitle is-4  ">Programming languages -</h6>
               <ul>
                 <li>• HTML</li>
                 <li>• Javascript</li>
@@ -441,7 +466,7 @@ export default function useCompetitionsmodel() {
             </header>
             <section class="modal-card-body">
               <img src={intellect}></img>
-              <p class="subtitle is-5 black-text">
+              <p class="subtitle is-5  ">
                 For the students who got a wise knowledge in the ICT field. This
                 competition will be held at the ICT Day without any
                 registrations, anyone can participate.
@@ -466,7 +491,7 @@ export default function useCompetitionsmodel() {
           <div class="columns">
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={code_com} alt="Placeholder image"></img>
                   </figure>
@@ -493,7 +518,7 @@ export default function useCompetitionsmodel() {
 
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={web_dezigner} alt="Placeholder image"></img>
                   </figure>
@@ -519,7 +544,7 @@ export default function useCompetitionsmodel() {
             </div>
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={cybercomb} alt="Placeholder image"></img>
                   </figure>
@@ -547,7 +572,7 @@ export default function useCompetitionsmodel() {
           <div class="columns">
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={dexigner} alt="Placeholder image"></img>
                   </figure>
@@ -573,7 +598,7 @@ export default function useCompetitionsmodel() {
             </div>
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image comp-img ">
                   <figure class="image is-4by3">
                     <img src={intellect} alt="Placeholder image"></img>
                   </figure>
@@ -666,9 +691,9 @@ export default function useCompetitionsmodel() {
               <div class="column mr-6">
                 <div class="card" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
-                    <figure class="image is-4by3">
+                    <figure class="throwback-img image is-4by3 ">
                       <img
-                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        src={kngine17}
                         alt="Placeholder image"
                       ></img>
                     </figure>
@@ -684,9 +709,9 @@ export default function useCompetitionsmodel() {
                 </div>
                 <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
-                    <figure class="image is-4by3">
+                    <figure class="throwback-img image is-4by3 ">
                       <img
-                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        src={kngine13}
                         alt="Placeholder image"
                       ></img>
                     </figure>
@@ -704,9 +729,9 @@ export default function useCompetitionsmodel() {
               <div class="column">
                 <div class="card" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
-                    <figure class="image is-4by3">
+                    <figure class="throwback-img image is-4by3 ">
                       <img
-                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        src={kngine15}
                         alt="Placeholder image"
                       ></img>
                     </figure>
@@ -722,9 +747,9 @@ export default function useCompetitionsmodel() {
                 </div>
                 <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
-                    <figure class="image is-4by3">
+                    <figure class="throwback-img image is-4by3 ">
                       <img
-                        src="https://bulma.io/images/placeholders/1280x960.png"
+                        src={kngine12}
                         alt="Placeholder image"
                       ></img>
                     </figure>

@@ -48,19 +48,16 @@ html{
   height: 50%;
   height: 50%;
   position: absolute;
-  left: 30%;
-  top: 30%;
-  animation: blip 5s infinite;
+  left: 25vw;
+  top: 25vh;
+  animation: blip 0.5s infinite;
   /* opacity: 20%; */
 }
 
 @keyframes blip {
-  0%{opacity: 40%;
-  top: 30%;}
-  50%{opacity: 70%;
-    top: 25%;}
-  100%{opacity: 40%;
-    top: 30%;}
+  0%{opacity: 20%;}
+  50%{opacity: 70%;}
+  100%{opacity: 20%;}
 }
 
 .hide-load{
@@ -80,6 +77,15 @@ html{
     background-size: cover;
     background-color: rgb(1, 6, 9);
     
+}
+
+.kngine{
+  position: fixed;
+  top: 40vh;
+  left: 0vw;
+  height: 30vh;
+  width: 130vw;
+  opacity: 100%;
 }
 
 .sec-comp{
@@ -355,6 +361,23 @@ html{
   .model-background{
     background-color: black;
   }
+  .modal-card-body{
+    background-color: rgb(13, 13, 13);
+    color: rgba(255, 255, 255, 0.792);
+  }
+  .modal-card-foot, .modal-card-head{
+    background-color: black;
+    color: white;
+  }
+  .modal-card-title{
+    color: white;
+  }
+  .delete{
+    transition: 0.5s;
+  }
+  .delete:hover{
+    transform: rotate(180deg);
+  }
 
 /* .card:has(.comp) .card-image{
   background-color: rgba(0, 0, 0, 0.521);
@@ -364,7 +387,7 @@ html{
   background:  radial-gradient(circle, rgb(0, 0, 15) 0%, rgba(0, 0, 0, 0.366) 100%);
 }
 
-.image.is-4by3 img{
+.comp-img .image.is-4by3 img{
   height: 90%;
   width: 90%;
   padding-left: 10%; 
@@ -373,12 +396,27 @@ html{
   /* height: 100px; */
 }
 
-.image.is-4by3 img:hover{
+.comp-img .image.is-4by3 img:hover{
   height: 100%;
   width: 100%;
   transform: rotate(2deg);
   padding-left: 0%; 
   padding-top: 0%; 
+}
+
+.throwback-img{
+  overflow: hidden;
+}
+
+.throwback-img img{
+  padding: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.throwback-img img:hover{
+  transform: scale(110%);
 }
 
 .model-holder{
@@ -413,6 +451,9 @@ html{
 
 
 @media (max-width:800px) {
+  .kngine{
+    display: none;
+  }
  
   #nav{
     display: none;
