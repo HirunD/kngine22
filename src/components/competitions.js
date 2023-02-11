@@ -19,7 +19,7 @@ import kngine15 from "../img/throwback/kngine15.jpg";
 import kngine13 from "../img/throwback/kngine13.jpg";
 import kngine12 from "../img/throwback/kngine12.jpg";
 
-import speakers from "../img/comp_icons/Cybercomb.png";
+import s1 from "../img/speakers/SuvinNimnaka.png";
 import throwbacks from "../img/comp_icons/Dexigner.png";
 import about from "../img/comp_icons/Intellect.png";
 import "../components/Navbar.css";
@@ -52,7 +52,7 @@ export default function useCompetitionsmodel() {
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
   // useEffect(() => {
-    
+
   // }, []);
   setTimeout(() => {
     // make planet inviciple in loader
@@ -121,36 +121,53 @@ export default function useCompetitionsmodel() {
     setModalOpenmenu("is-active");
     setModalOpennavclose(" ");
   };
+
+  function myMove() {
+    var id = null;
+
+    var elem = document.getElementById("nav");
+    function myMove() {
+      var pos = 0;
+      clearInterval(id);
+      id = setInterval(frame, 10);
+      console.log("mousedown");
+      function frame() {
+        if (pos == 350) {
+          clearInterval(id);
+        } else {
+          pos++;
+          elem.style.top = pos + "px";
+          elem.style.left = pos + "px";
+        }
+      }
+    }
+  }
+
   const handleClosenav = () => {
     setModalOpennavclose("hide");
     setModalOpenmenu(" ");
     setModalOpennav(" ");
   };
 
-  
   const [loadervisible, setloadervisible] = useState("");
   useEffect(() => {
     setTimeout(() => {
       setloadervisible("hide-load");
     }, 2000);
-  }, )
+  });
 
   useEffect(() => {
-    
-    const onScroll = (event) =>{
+    const onScroll = (event) => {
       if (event.target.scrollingElement.scrollTop > 30) {
-      AOS.init({
-        duration: 1000,
-      });
-      }else{
+        AOS.init({
+          duration: 1000,
+        });
+      } else {
         console.log("less than ");
       }
-    }
-    document.addEventListener("scroll", onScroll)
-  }, )
-  
-  
-  
+    };
+    document.addEventListener("scroll", onScroll);
+  });
 
   return (
     <>
@@ -171,9 +188,9 @@ export default function useCompetitionsmodel() {
           data-aos-duration="5000"
         ></img>
       </div>
-      <div class="full abt-full">
+      {/* <div class="full abt-full">
         <img src={ISS} data-aos="zoom-out-left" data-aos-duration="5000"></img>
-      </div>
+      </div> */}
       <div class={`loading ${loadervisible}`}>
         <img
           src={loader}
@@ -211,7 +228,7 @@ export default function useCompetitionsmodel() {
           <a class="navbar-item" href="#comp">
             COOMPITIONS
           </a>
-          <a class="navbar-item" href="#speakers">
+          <a class="navbar-item" href="#speakers" onMouseOver={myMove}>
             FEATURING
           </a>
           <a class="navbar-item" href="#throwbacks">
@@ -251,16 +268,16 @@ export default function useCompetitionsmodel() {
           data-aos="zoom-out"
           data-aos-mirror="true"
         >
-          <img  src={kngine} class="kngine"></img>
+          <img src={kngine} class="kngine"></img>
           <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
             <div class="columns ">
               <div class="column">
                 <h2 class="title countdown" id="count">
-                  {days}  :  {hours}  :  {minutes}  :  {seconds}
+                  {days} : {hours} : {minutes} : {seconds}
                 </h2>
                 <h2 class="title countdown-mobile" id="count">
-                  {days}    {hours}    {minutes}    {seconds}
+                  {days} {hours} {minutes} {seconds}
                 </h2>
                 {/* <hr class="breaker2"></hr>
                 <hr class="breaker3"></hr>
@@ -647,10 +664,30 @@ export default function useCompetitionsmodel() {
             <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
               <div class="hover">
                 <figure class="card-image has-text-centered is-128x128">
-                  <img
-                    class="is-rounded"
-                    src="https://bulma.io/images/placeholders/256x256.png"
-                  ></img>
+                  <div class="speakers-div is-rounded">
+                    <img
+                      class="speakers-img is-rounded"
+                      src={s1}
+                      // src="https://bulma.io/images/placeholders/256x256.png"
+                    ></img>
+                  </div>
+                </figure>
+                <div class="media-content has-text-centered">
+                  <p class="title is-4">Suvin Nimnaka</p>
+                  <p class="subtitle is-6">Software Engineer</p>
+                </div>
+              </div>
+            </div>
+            <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
+              <div class="hover">
+                <figure class="card-image has-text-centered is-128x128 is-square">
+                  <div class="speakers-div is-rounded">
+                    <img
+                      class="speakers-img is-rounded"
+                      src={s1}
+                      // src="https://bulma.io/images/placeholders/256x256.png"
+                    ></img>
+                  </div>
                 </figure>
                 <div class="media-content has-text-centered">
                   <p class="title is-4">John Smith</p>
@@ -660,15 +697,18 @@ export default function useCompetitionsmodel() {
             </div>
             <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
               <div class="hover">
-                <figure class="card-image has-text-centered is-128x128 is-square">
-                  <img
-                    class="is-rounded"
-                    src="https://bulma.io/images/placeholders/256x256.png"
-                  ></img>
+                <figure class="card-image has-text-centered is-128x128">
+                  <div class="speakers-div is-rounded">
+                    <img
+                      class="speakers-img is-rounded"
+                      src={s1}
+                      // src="https://bulma.io/images/placeholders/256x256.png"
+                    ></img>
+                  </div>
                 </figure>
                 <div class="media-content has-text-centered">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
+                  <p class="title is-4">Suvin Nimnaka</p>
+                  <p class="subtitle is-6">Software Engineer</p>
                 </div>
               </div>
             </div>
@@ -692,10 +732,7 @@ export default function useCompetitionsmodel() {
                 <div class="card" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
-                      <img
-                        src={kngine17}
-                        alt="Placeholder image"
-                      ></img>
+                      <img src={kngine17} alt="Placeholder image"></img>
                     </figure>
                   </div>
                   <div class="card-content">
@@ -710,10 +747,7 @@ export default function useCompetitionsmodel() {
                 <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
-                      <img
-                        src={kngine13}
-                        alt="Placeholder image"
-                      ></img>
+                      <img src={kngine13} alt="Placeholder image"></img>
                     </figure>
                   </div>
                   <div class="card-content">
@@ -730,10 +764,7 @@ export default function useCompetitionsmodel() {
                 <div class="card" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
-                      <img
-                        src={kngine15}
-                        alt="Placeholder image"
-                      ></img>
+                      <img src={kngine15} alt="Placeholder image"></img>
                     </figure>
                   </div>
                   <div class="card-content">
@@ -748,10 +779,7 @@ export default function useCompetitionsmodel() {
                 <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
-                      <img
-                        src={kngine12}
-                        alt="Placeholder image"
-                      ></img>
+                      <img src={kngine12} alt="Placeholder image"></img>
                     </figure>
                   </div>
                   <div class="card-content">
@@ -790,20 +818,19 @@ export default function useCompetitionsmodel() {
               data-aos-offset="500"
               data-aos-duration="2000"
             >
-              RITS, Richmond College IT Society inaugurated few decades ago, has
-              now dominated every school IT Societies around the island, doing
-              an evolutionary change in the horizon of the school ICT field.
-              RITS has shown their exellence in the vast technological field by
-              competing with all the leading ICT societies in the schools. The
-              Richmond College IT Society has now developed with the newest and
-              timely technology and knowledge to achieve any target combined
-              with our spirit and the huge co-operation of former members and
-              teachers. The next phase of our annual celebrations; The Knowledge
-              Engine 2018 comes out with a comprehensive conecpt this time.
-              KNGINE’18 stands with the professional ICT knowledge and the
-              skills to be shared with all the master IT minds around us and it
-              has become the reflection and the unrivalled nobilty of our ICT
-              Society.
+              RITS, the Richmond College IT Society, which was established a few
+              decades ago, today dominates all of the island's school IT
+              societies, bringing about an evolution in the ICT area for
+              education. RITS has demonstrated their superiority in the vast
+              field of technology by competing with all of the top schools' ICT
+              societies. The Richmond College IT Society has evolved with the
+              most recent and relevant information and technology to reach any
+              goal, mixed with our spirit and the enormous cooperation of former
+              members and teachers. Knowledge Engine 2023 releases a thorough
+              checklist for our upcoming phase of annual celebrations. KNGINE's
+              cosmos has emerged as our ICT society's unrivaled nobility,
+              standing with professional ICT knowledge and abilities to be
+              shared with all the master IT brains around us.
             </p>
           </div>
         </div>
