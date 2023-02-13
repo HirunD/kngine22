@@ -1,5 +1,4 @@
 import react, { useState, useEffect } from "react";
-import "./App.css";
 import Home from "./Pages/Home";
 import Test from "./Pages/Test";
 // import About from "./Pages/about";
