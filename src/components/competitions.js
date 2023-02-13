@@ -279,7 +279,7 @@ export default function useCompetitionsmodel() {
   useEffect(() => {
     setTimeout(() => {
       setloadervisible("hide-load");
-    }, 2000);
+    }, 3000);
   });
 
   useEffect(() => {
