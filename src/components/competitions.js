@@ -255,7 +255,7 @@ export default function useCompetitionsmodel() {
           data-aos="zoom-out"
           data-aos-mirror="true"
         >
-          <img src={kngine} class="kngine"></img>
+          {/* <img src={kngine} class="kngine"></img> */}
           <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
             <div class="columns ">
