@@ -634,7 +634,8 @@ export default function useCompetitionsmodel() {
             <section class="modal-card-body">
               <img src={code_com}></img>
               <hr class="breaker-form"></hr>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8qYN20S0jz54evnkPP6ZRrweNsUgBWrPTaCgFPRtzIV931Q/viewform?embedded=true" width="600" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              <iframe className="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSf8qYN20S0jz54evnkPP6ZRrweNsUgBWrPTaCgFPRtzIV931Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              {/* <iframe className="small-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSf8qYN20S0jz54evnkPP6ZRrweNsUgBWrPTaCgFPRtzIV931Q/viewform?embedded=true" width="250" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
             </section>
           </div>
         </div>
@@ -776,7 +777,6 @@ export default function useCompetitionsmodel() {
                 </footer>
               </div>
             </div> */}
-            <div className="column"></div>
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image comp-img">
@@ -803,8 +803,6 @@ export default function useCompetitionsmodel() {
                 </footer>
               </div>
             </div>
-          </div>
-          <div class="columns">
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image comp-img">
@@ -831,6 +829,8 @@ export default function useCompetitionsmodel() {
                 </footer>
               </div>
             </div>
+          </div>
+          <div class="columns">
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image comp-img ">
@@ -857,6 +857,11 @@ export default function useCompetitionsmodel() {
                 </footer>
               </div>
             </div>
+            <div
+              class="column"
+              data-aos="slide-right"
+              data-aos-duration="1000"
+            ></div>
             <div
               class="column"
               data-aos="slide-right"

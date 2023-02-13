@@ -115,7 +115,7 @@ html{
 .breaker3{
   border-top: 3px solid rgb(255, 255, 255);
   border-radius: 6px;
-  width: 10vw;
+  width: 59vw;
   position: relative;
   left: 31vw;
   top: -1.5vh;
@@ -306,7 +306,7 @@ html{
   }
 
   .cliped{
-    height: 18rem;
+    height: 1rem;
     width: 110vw;
     overflow: hidden;
   }
@@ -472,10 +472,14 @@ html{
   transform: scale(110%);
 }
 .modal-card{
-  
   width: 70vw;
 }
 
+.iframe{
+  margin-left: 3vw;
+  width: 60vw;
+  height: 150vh;
+}
 
 
 @media (max-width: 1114px) {
@@ -615,7 +619,7 @@ html{
   margin-right: -10vw !important;
   width: 95vw;
 }
-.navbar{
+.nav{
   display: none;
 }
 .curved{
@@ -630,6 +634,21 @@ html{
   z-index: 20;
   /* display: none; */
 
+}
+.modal-card{
+  width: 90vw;
+  margin-left: -45vw;
+}
+.iframe{
+  width: 75vw;
+}
+.card{
+  width: 70vw;
+  margin-left: 10vw;
+}
+.footer{
+  bottom: 20vh ;
+  display: inherit;
 }
 }
 
