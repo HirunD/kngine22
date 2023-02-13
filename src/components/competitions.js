@@ -24,6 +24,8 @@ import throwbacks from "../img/comp_icons/Dexigner.png";
 import about from "../img/comp_icons/Intellect.png";
 import "../components/Navbar.css";
 import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useCountdown } from "../hooks/useCountdown";
 
 // import firebase from 'firebase/app';
@@ -280,7 +282,18 @@ export default function useCompetitionsmodel() {
     }, 3000);
   });
 
-  
+  useEffect(() => {
+    const onScroll = (event) => {
+      if (event.target.scrollingElement.scrollTop > 30) {
+        AOS.init({
+          duration: 1000,
+        });
+      } else {
+        console.log("less than ");
+      }
+    };
+    document.addEventListener("scroll", onScroll);
+  });
 
   return (
     <>
