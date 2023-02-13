@@ -719,7 +719,7 @@ export default function useCompetitionsmodel() {
           Compititions
         </h3>
         <h5 class="subtitle has-text-centered" data-aos="fade-up">
-          Submit your projects before 23:59 17 February 2018
+          Submit your projects before 23:59 26 February 2023
         </h5>
         <div class="container is-widescreen">
           <div class="columns">
@@ -891,7 +891,7 @@ export default function useCompetitionsmodel() {
                 </figure>
                 <div class="media-content has-text-centered">
                   <p class="title is-4">Suvin Nimnaka</p>
-                  <p class="subtitle is-6">Software Engineer</p>
+                  <p class="subtitle is-6">GitHub Campus Expert</p>
                 </div>
               </div>
             </div>

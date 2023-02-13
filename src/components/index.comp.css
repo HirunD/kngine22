@@ -89,7 +89,7 @@ html{
 }
 
 .sec-comp{
-  background-color: rgba(0, 0, 0, 0.762);
+  background-color: rgba(0, 0, 0, 0.362);
   box-shadow: 0 0 150px 150px rgba(0, 0, 0, 0.834);
   z-index: 10;
 }
