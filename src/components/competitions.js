@@ -352,7 +352,7 @@ export default function useCompetitionsmodel() {
         </div>
         <div class={`navbar-menu ${modalOpenmenu}`} onClick={handleClosenav}>
           <a class="navbar-item" href="#comp">
-            COOMPITIONS
+            COMPITIONS
           </a>
           <a class="navbar-item" href="#speakers" onMouseOver={myMove}>
             FEATURING
