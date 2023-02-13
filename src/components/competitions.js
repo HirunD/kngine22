@@ -282,18 +282,7 @@ export default function useCompetitionsmodel() {
     }, 3000);
   });
 
-  useEffect(() => {
-    const onScroll = (event) => {
-      if (event.target.scrollingElement.scrollTop > 30) {
-        AOS.init({
-          duration: 1000,
-        });
-      } else {
-        console.log("less than ");
-      }
-    };
-    document.addEventListener("scroll", onScroll);
-  });
+  
 
   return (
     <>
