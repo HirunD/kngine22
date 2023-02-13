@@ -121,6 +121,15 @@ html{
   top: -1.5vh;
   z-index: 0;
 }
+.breaker-form{
+  border-top: 3px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  width: 30vw;
+  opacity: 20%;
+  position: relative;
+  left: 5vw;
+  z-index: 100;
+}
 
 /* planet */
 .full{
@@ -234,7 +243,7 @@ html{
   .section{
     /* background-color: rgba(0, 0, 0, 0.304); */
     background-image: black;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     position: relative;
     z-index: 50;
     /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.399); */
@@ -460,6 +469,7 @@ html{
 .fa:hover{
   background-color: rgba(37, 37, 255, 0.353);
   color: rgb(255, 255, 255);
+  transform: scale(110%);
 }
 
 

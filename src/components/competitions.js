@@ -28,6 +28,107 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCountdown } from "../hooks/useCountdown";
 
+// import firebase from 'firebase/app';
+// import'firebase/firestore';
+
+// import { useCollectionData } from 'react-firebase-hooks/firestore'
+
+// firebase.initializeApp({
+//   apiKey: "AIzaSyC1JoAr0bzZUwZSJosuQgn3IPrN7LwOFro",
+//   authDomain: "kngine22.firebaseapp.com",
+//   projectId: "kngine22",
+//   storageBucket: "kngine22.appspot.com",
+//   messagingSenderId: "929784554490",
+//   appId: "1:929784554490:web:50fa52c31fee65ed9bfa43"
+// })
+
+// const firestore = firebase.firestore();
+// function submit(form) {
+//   const formRef = firestore.collection('Forms')
+
+//   const [formValuecodecomsn, setFormValuecodecomsn] = useState('')
+//   const [formValuecodecompn, setFormValuecodecompn] = useState('')
+//   const [formValuecodecomcn, setFormValuecodecomcn] = useState('')
+//   const [formValuecodecomce, setFormValuecodecomce] = useState('')
+//   const [formValuecodecomct, setFormValuecodecomct] = useState('')
+//   const [formValuecodecomdl, setFormValuecodecomdl] = useState('')
+
+//   // const [formValuewebdez, setformValuewebdez] = useState('')
+//   // const [formValuewebdez, setformValuewebdez] = useState('')
+//   // const [formValuewebdez, setformValuewebdez] = useState('')
+//   // const [formValuewebdez, setformValuewebdez] = useState('')
+//   // const [formValuewebdez, setformValuewebdez] = useState('')
+//   // const [formValuewebdez, setformValuewebdez] = useState('')
+
+//   // const [formValuecc, setformValuecc] = useState('')
+//   // const [formValuecc, setformValuecc] = useState('')
+//   // const [formValuecc, setformValuecc] = useState('')
+//   // const [formValuecc, setformValuecc] = useState('')
+//   // const [formValuecc, setformValuecc] = useState('')
+//   // const [formValuecc, setformValuecc] = useState('')
+
+//   // const [formValuedexigner, setformValuedexigner] = useState('')
+//   // const [formValuedexigner, setformValuedexigner] = useState('')
+//   // const [formValuedexigner, setformValuedexigner] = useState('')
+//   // const [formValuedexigner, setformValuedexigner] = useState('')
+//   // const [formValuedexigner, setformValuedexigner] = useState('')
+//   // const [formValuedexigner, setformValuedexigner] = useState('')
+
+//   // const [formValueinterlect, setformValueinterlect] = useState('')
+//   // const [formValueinterlect, setformValueinterlect] = useState('')
+//   // const [formValueinterlect, setformValueinterlect] = useState('')
+//   // const [formValueinterlect, setformValueinterlect] = useState('')
+//   // const [formValueinterlect, setformValueinterlect] = useState('')
+//   // const [formValueinterlect, setformValueinterlect] = useState('')
+
+//   const sendMessagecodecom = async(e)=> {
+//     e.preventDefault();
+//     await formRef.codecom.add({
+//       school_name : formValuecodecomsn,
+//       project_name : formValuecodecompn,
+//       compt_name : formValuecodecomcn,
+//       compt_email : formValuecodecomce,
+//       compt_tp : formValuecodecomct,
+//       drive : formValuecodecomdl
+//     })
+//   }
+//   const sendMessagewebdez = async(e)=> {
+//     e.preventDefault();
+//     await formRef.codecom.add({
+//       school_name : formValuecodecomsn,
+//       project_name : formValuecodecompn,
+//       compt_name : formValuecodecomcn,
+//       compt_email : formValuecodecomce,
+//       compt_tp : formValuecodecomct,
+//       drive : formValuecodecomdl
+//     })
+//   }
+//   const sendMessagecyberc = async(e)=> {
+//     e.preventDefault();
+//     await formRef.codecom.add({
+//       school_name : formValuecodecomsn,
+//       project_name : formValuecodecompn,
+//       compt_name : formValuecodecomcn,
+//       compt_email : formValuecodecomce,
+//       compt_tp : formValuecodecomct,
+//       drive : formValuecodecomdl
+//     })
+//   }
+//   const sendMessagedex = async(e)=> {
+//     e.preventDefault();
+//     await formRef.codecom.add({
+//       school_name : formValuecodecomsn,
+//       project_name : formValuecodecompn,
+//       compt_name : formValuecodecomcn,
+//       compt_email : formValuecodecomce,
+//       compt_tp : formValuecodecomct,
+//       drive : formValuecodecomdl
+//     })
+//   };
+
+  
+// }
+
 export default function useCompetitionsmodel() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -35,23 +136,9 @@ export default function useCompetitionsmodel() {
   let earth = document.getElementById("planet");
   let more_info = document.getElementById("more-info");
 
-  const targetDate = new Date("March 09, 2023 09:30:00");
+  const targetDate = new Date("March 02, 2023 09:30:00");
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
-  // useEffect(() => {
-
-  // }, []);
-  setTimeout(() => {
-    // make planet inviciple in loader
-  });
-
-  // useEffect(() => {
-  //   if (!more_info) {
-  //     const more_info = document.getElementById("more-info");
-  //   }
-  //   addEventListener()
-
-  // }, [])
 
   const [modalOpen, setModalOpen] = useState("");
 
@@ -99,6 +186,58 @@ export default function useCompetitionsmodel() {
     setModalOpen4("");
   };
 
+  // form controll
+  const [formOpen1, setFormOpen1] = useState("");
+
+  const handleClickf1 = () => {
+    setFormOpen1("is-active");
+  };
+
+  const handleClosef1 = () => {
+    setFormOpen1("");
+  };
+
+  // form 2
+  const [formOpen2, setFormOpen2] = useState("");
+
+  const handleClickf2 = () => {
+    setFormOpen2("is-active");
+  };
+
+  const handleClosef2 = () => {
+    setFormOpen2(" ");
+  };
+
+  // form 3
+  const [formOpen3, setFormOpen3] = useState("");
+
+  const handleClickf3 = () => {
+    setFormOpen3("is-active");
+  };
+
+  const handleClosef3 = () => {
+    setFormOpen3("");
+  };
+  // form 4
+  const [formOpen4, setFormOpen4] = useState("");
+
+  const handleClickf4 = () => {
+    setFormOpen4("is-active");
+  };
+
+  const handleClosef4 = () => {
+    setFormOpen4("");
+  };
+   // form 5
+   const [formOpen5, setFormOpen5] = useState("");
+
+   const handleClickf5 = () => {
+     setFormOpen5("is-active");
+   };
+ 
+   const handleClosef5 = () => {
+     setFormOpen5("");
+   };
   const [modalOpennav, setModalOpennav] = useState("");
   const [modalOpenmenu, setModalOpenmenu] = useState("");
   const [modalOpennavclose, setModalOpennavclose] = useState("hide");
@@ -158,7 +297,7 @@ export default function useCompetitionsmodel() {
 
   return (
     <>
-      <div class="full comp-full">
+      {/* <div class="full comp-full">
         <img
           src={planet_dup}
           data-aos="zoom-out-left"
@@ -174,7 +313,7 @@ export default function useCompetitionsmodel() {
           data-aos="zoom-out-left"
           data-aos-duration="5000"
         ></img>
-      </div>
+      </div> */}
       {/* <div class="full abt-full">
         <img src={ISS} data-aos="zoom-out-left" data-aos-duration="5000"></img>
       </div> */}
@@ -301,9 +440,9 @@ export default function useCompetitionsmodel() {
               </h6>
               <h6 class="subtitle is-4  ">Programming languages -</h6>
               <ul>
-                <li>• Coffee</li>
-                <li>• Tea</li>
-                <li>• Milk</li>
+                <li>• Python</li>
+                <li>• Pascal</li>
+                <li>• Visual Basic</li>
               </ul>
             </section>
           </div>
@@ -423,6 +562,8 @@ export default function useCompetitionsmodel() {
                 <li>mp_citystreet (District)</li>
                 <li>mp_strike (Strike)</li>
               </ol>
+              <p className="pt-3">Substitutions – Only players signed up on the team list may be used as substitutes.</p>
+              <p className="pt-3">If you want use custom cfg email it <a href="mailto:richmondcollegeict@gmail.com">richmondcollegeict@gmail.com</a> before 18th february 2018. If not You have to play with a cfg given to by the organizing committee</p>
             </section>
           </div>
         </div>
@@ -430,7 +571,7 @@ export default function useCompetitionsmodel() {
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
-              <p class="modal-card-title">Pixelate</p>
+              <p class="modal-card-title">deXigner</p>
               <button
                 class="delete"
                 aria-label="close"
@@ -478,6 +619,95 @@ export default function useCompetitionsmodel() {
             </section>
           </div>
         </div>
+        {/* forms */}
+        <div class={`modal ${formOpen1}`}>
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Code_com</p>
+              <button
+                class="delete"
+                aria-label="close"
+                onClick={handleClosef1}
+              ></button>
+            </header>
+            <section class="modal-card-body">
+              <img src={code_com}></img>
+              <hr class="breaker-form"></hr>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8qYN20S0jz54evnkPP6ZRrweNsUgBWrPTaCgFPRtzIV931Q/viewform?embedded=true" width="600" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </section>
+          </div>
+        </div>
+        <div class={`modal ${formOpen2}`}>
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Web_Dezigner</p>
+              <button
+                class="delete"
+                aria-label="close"
+                onClick={handleClosef2}
+              ></button>
+            </header>
+            <section class="modal-card-body">
+              <img src={web_dezigner}></img>
+              <hr class="breaker-form"></hr>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSca3FbaMxqk0f4GxRIRR447UqQxQc2ppaGihDGbhUqAE5dKyQ/viewform?embedded=true" width="600" height="1082" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>            </section>
+          </div>
+        </div>
+        <div class={`modal ${formOpen3}`}>
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Cyber_Combat</p>
+              <button
+                class="delete"
+                aria-label="close"
+                onClick={handleClosef3}
+              ></button>
+            </header>
+            <section class="modal-card-body">
+              <img src={cybercomb}></img>
+              <hr class="breaker-form"></hr>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVb-E41W-6Mqv_2EoxLDjSreMhxD1DzrbePsIRzFI4ctmtCw/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </section>
+          </div>
+        </div>
+        <div class={`modal ${formOpen4}`}>
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Dexigner</p>
+              <button
+                class="delete"
+                aria-label="close"
+                onClick={handleClosef4}
+              ></button>
+            </header>
+            <section class="modal-card-body">
+              <img src={dexigner}></img>
+              <hr class="breaker-form"></hr>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMeSe6OoXHTsebKz5CyX25dkRXwAGLfvGghar8OPE-PypUfA/viewform?embedded=true" width="600" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </section>
+          </div>
+        </div>
+        <div class={`modal ${formOpen5}`}>
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Intellect</p>
+              <button
+                class="delete"
+                aria-label="close"
+                onClick={handleClosef5}
+              ></button>
+            </header>
+            <section class="modal-card-body">
+              <img src={intellect}></img>
+              <h5>For the students who got a wise knowledge in the ICT field. This competition will be held at the ICT Day without any registrations, anyone can participate.</h5>
+              </section>
+          </div>
+        </div>
       </div>
       <section
         id="comp"
@@ -510,7 +740,7 @@ export default function useCompetitionsmodel() {
                   <div class="content">Programming competition</div>
                 </div>
                 <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
+                  <a onClick={handleClickf1} class="card-footer-item">
                     Register
                   </a>
                   <a onClick={handleClick} class="card-footer-item">
@@ -537,7 +767,7 @@ export default function useCompetitionsmodel() {
                   <div class="content">Web Designing competition</div>
                 </div>
                 <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
+                  <a onClick={handleClickf2} class="card-footer-item">
                     Register
                   </a>
                   <a onClick={handleClick1} class="card-footer-item">
@@ -563,7 +793,7 @@ export default function useCompetitionsmodel() {
                   <div class="content">Gaming Comepetition</div>
                 </div>
                 <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
+                  <a onClick={handleClickf3} class="card-footer-item">
                     Register
                   </a>
                   <a onClick={handleClick2} class="card-footer-item">
@@ -584,14 +814,14 @@ export default function useCompetitionsmodel() {
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
-                      <p class="title is-4">Pixelate</p>
+                      <p class="title is-4">deXigner</p>
                     </div>
                   </div>
 
                   <div class="content">Graphic Designing competition</div>
                 </div>
                 <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
+                  <a onClick={handleClickf4} class="card-footer-item">
                     Register
                   </a>
                   <a onClick={handleClick3} class="card-footer-item">
@@ -617,7 +847,7 @@ export default function useCompetitionsmodel() {
                   <div class="content">Quiz competition</div>
                 </div>
                 <footer class="card-footer">
-                  <a href="#" class="card-footer-item">
+                  <a onClick={handleClickf5} class="card-footer-item">
                     Register
                   </a>
                   <a onClick={handleClick4} class="card-footer-item">
@@ -827,8 +1057,14 @@ export default function useCompetitionsmodel() {
       <div class=" cliped" data-aos="zoom-out">
         <footer class="footer curved">
           <div class="content has-text-centered">
-            <a href="https://www.facebook.com/RITS.KNGINE?mibextid=ZbWKwL" class="fa fa-facebook"></a>
-            <a href="https://www.instagram.com/richmonditsociety/" class="fa fa-instagram"></a>
+            <a
+              href="https://www.facebook.com/RITS.KNGINE?mibextid=ZbWKwL"
+              class="fa fa-facebook"
+            ></a>
+            <a
+              href="https://www.instagram.com/richmonditsociety/"
+              class="fa fa-instagram"
+            ></a>
             <a href="https://twitter.com/KNGINE20" class="fa fa-twitter"></a>
             <p>Copyright © Richmond College IT Society 2018</p>
           </div>
