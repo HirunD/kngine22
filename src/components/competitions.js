@@ -27,19 +27,6 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCountdown } from "../hooks/useCountdown";
-// import {  } from "@react-google-maps/api";
-
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
-// import {createRoot} from 'react-dom/client';
-// import Countdown from 'react-countdown'
-
-// const rootElement = document.getElementById("count");
-// const root = createRoot(rootElement);
-
-// root.render(
-// <Countdown date={Date.now() + 10000} />
-// )
 
 export default function useCompetitionsmodel() {
   const [show, setShow] = useState(true);
@@ -840,6 +827,8 @@ export default function useCompetitionsmodel() {
       <div class=" cliped" data-aos="zoom-out">
         <footer class="footer curved">
           <div class="content has-text-centered">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
             <p>Copyright © Richmond College IT Society 2018</p>
           </div>
         </footer>

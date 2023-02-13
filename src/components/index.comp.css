@@ -438,12 +438,14 @@ html{
   position: fixed;
   z-index: 120;
 }
+  
 .navbar{
   display: none;
 }
 .countdown-mobile{
   display: none;
 }
+
 
 
 @media (max-width: 1114px) {
