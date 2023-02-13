@@ -471,6 +471,10 @@ html{
   color: rgb(255, 255, 255);
   transform: scale(110%);
 }
+.modal-card{
+  
+  width: 70vw;
+}
 
 
 
@@ -491,6 +495,10 @@ html{
 .navbar{
   display: none;
 }
+.modal-card{
+  margin-left: 10%;
+}
+
 }
 
 
@@ -547,6 +555,14 @@ html{
   .navbar-brand{
     background-color: rgba(0, 0, 0, 0.299);
     backdrop-filter: blur(15px);
+  }
+  .modal-card{
+    width: 70vw;
+    margin-left: -15vw;
+  }
+  .card{
+    margin-left: 25vw;
+    width: 50vw;
   }
 }
 

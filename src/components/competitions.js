@@ -638,7 +638,7 @@ export default function useCompetitionsmodel() {
             </section>
           </div>
         </div>
-        <div class={`modal ${formOpen2}`}>
+        {/* <div class={`modal ${formOpen2}`}>
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
@@ -654,7 +654,7 @@ export default function useCompetitionsmodel() {
               <hr class="breaker-form"></hr>
               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSca3FbaMxqk0f4GxRIRR447UqQxQc2ppaGihDGbhUqAE5dKyQ/viewform?embedded=true" width="600" height="1082" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>            </section>
           </div>
-        </div>
+        </div> */}
         <div class={`modal ${formOpen3}`}>
           <div class="modal-background"></div>
           <div class="modal-card">
@@ -750,7 +750,7 @@ export default function useCompetitionsmodel() {
               </div>
             </div>
 
-            <div class="column" data-aos="slide-right" data-aos-duration="1000">
+            {/* <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
@@ -775,7 +775,8 @@ export default function useCompetitionsmodel() {
                   </a>
                 </footer>
               </div>
-            </div>
+            </div> */}
+            <div className="column"></div>
             <div class="column" data-aos="slide-right" data-aos-duration="1000">
               <div class="card">
                 <div class="card-image comp-img">
@@ -1066,7 +1067,7 @@ export default function useCompetitionsmodel() {
               class="fa fa-instagram"
             ></a>
             <a href="https://twitter.com/KNGINE20" class="fa fa-twitter"></a>
-            <p>Copyright © Richmond College IT Society 2018</p>
+            <p>Copyright © Richmond College IT Society 2023</p>
           </div>
         </footer>
         <div class="box circle"></div>

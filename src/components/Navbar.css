@@ -46,7 +46,7 @@
   display: inline-block;
   text-decoration: none;
   font-size: 0.9rem;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
@@ -58,7 +58,7 @@
 }
 
 .nav a:hover{
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   transform: scale(110%);
   padding-left: 20px;
   font-weight: bolder;
@@ -164,7 +164,7 @@
 }
 
 .glass{
-  background-color: rgba(255, 255, 255, 0.097);
+  background-color: rgb(255, 255, 255);
   color: white;
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 6px 0.5px rgba(95, 95, 95, 0.258);
@@ -175,7 +175,7 @@
 
 }
 .glass:hover{
-  background-color: rgba(255, 255, 255, 0.827);
+  background-color: rgba(255, 255, 255, 0.142);
   backdrop-filter: blur(10px);
   border-radius: 0px 15px 15px 0px;
   margin-left: 20px;
