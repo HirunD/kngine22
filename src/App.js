@@ -5,6 +5,7 @@ import Test from "./Pages/Test";
 // import News from "./Pages/news";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Contact from "./Pages/contact";
 
