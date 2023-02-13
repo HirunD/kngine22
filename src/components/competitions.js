@@ -827,8 +827,9 @@ export default function useCompetitionsmodel() {
       <div class=" cliped" data-aos="zoom-out">
         <footer class="footer curved">
           <div class="content has-text-centered">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://www.facebook.com/RITS.KNGINE?mibextid=ZbWKwL" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/richmonditsociety/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/KNGINE20" class="fa fa-twitter"></a>
             <p>Copyright © Richmond College IT Society 2018</p>
           </div>
         </footer>
