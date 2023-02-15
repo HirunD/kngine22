@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 // import "bulma/css/bulma.min.css";
 // import styles from "./index.comp.css";
 import "./index.comp.css";
+import cosmos from "../img/cosmos.png";
 import planet from "../img/earth.png";
 import planet_dup from "../img/planet_dup.png";
 import rock from "../img/rock.png";
@@ -25,6 +26,7 @@ import s1 from "../img/speakers/SuvinNimnaka.png";
 import throwbacks from "../img/comp_icons/Dexigner.png";
 import about from "../img/comp_icons/Intellect.png";
 import "../components/Navbar.css";
+
 import { useCountdown } from "../hooks/useCountdown";
 
 // import firebase from 'firebase/app';
@@ -286,6 +288,7 @@ function Competitionsmodel() {
 
   return (
     <>
+    <img src={cosmos} className="logo"></img>
       {/* <div class="full comp-full">
         <img
           src={planet_dup}
@@ -316,6 +319,7 @@ function Competitionsmodel() {
       </div>
       <div class="navbar is-fixed-top" data-aos="zoom-out">
         <div class="navbar-brand">
+        
           <a
             role="button"
             class={`navbar-burger nav-open ${modalOpennav} ${modalOpenmenu}`}
@@ -352,6 +356,11 @@ function Competitionsmodel() {
           <a class="navbar-item" href="#about">
             ABOUT US
           </a>
+        </div>
+        <div class="navbar-end">
+        <a class="navbar-item">
+      <img src={cosmos} width="112" height="28"></img>
+    </a>
         </div>
       </div>
       <div class="nav " id="nav" data-aos="slide-right">
@@ -717,6 +726,7 @@ function Competitionsmodel() {
           <div class="columns mt-6">
             <div class="column">
               <div class="card" data-aos="slide-right" data-aos-duration="900">
+
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={code_com} alt="Placeholder image"></img>
@@ -742,7 +752,7 @@ function Competitionsmodel() {
               </div>
             </div>
 
-            {/* <div class="column" data-aos="slide-right" data-aos-duration="1000">
+            {/* <div class="column"  >
               <div class="card">
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
@@ -796,6 +806,7 @@ function Competitionsmodel() {
             </div>
             <div class="column">
               <div class="card" data-aos="slide-right" data-aos-duration="900">
+
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={dexigner} alt="Placeholder image"></img>

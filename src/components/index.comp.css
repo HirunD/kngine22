@@ -501,6 +501,16 @@ html{
 
 
 @media (max-width:800px) {
+  .navbar-item{
+    margin-left: 75vw;
+    margin-top: -6vh;
+  }
+  .logo{
+    display: none;
+  }
+  .load-img{
+    left: 0vw;
+  }
   .kngine{
     display: none;
   }
@@ -561,6 +571,9 @@ html{
   .card{
     margin-left: 25vw;
     width: 50vw;
+  }
+  .clipped{
+    margin-bottom: 10vh;
   }
 }
 
