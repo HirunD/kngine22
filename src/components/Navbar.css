@@ -18,6 +18,14 @@
   padding-bottom: 1%;
 } */
 
+.logo{
+  position: fixed;
+  left: 1vw;
+  top: 1vh;
+  height: 7vh;
+  z-index: 100;
+}
+
 .nav{
   position: fixed;
   top: 40vh;
