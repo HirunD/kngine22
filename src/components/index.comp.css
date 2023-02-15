@@ -573,7 +573,7 @@ html{
     width: 50vw;
   }
   .clipped{
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
   }
 }
 
@@ -598,6 +598,7 @@ html{
     height: 50vh;
     opacity: 100%;
     right: -180px;
+    transition: 1s;
   }
   
 .comp-full{
