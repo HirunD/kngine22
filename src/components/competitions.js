@@ -723,9 +723,10 @@ function Competitionsmodel() {
           <h5 class="subtitle has-text-centered mb-5" data-aos="fade-up">
             Submit your projects before 23:59 26 February 2023
           </h5>
+          <div className="container" data-aos="fade" data-aos-duration="1000">
           <div class="columns mt-6">
             <div class="column">
-              <div class="card" data-aos="slide-right" data-aos-duration="900">
+              <div class="card" >
 
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
@@ -779,7 +780,7 @@ function Competitionsmodel() {
               </div>
             </div> */}
             <div class="column">
-              <div class="card" data-aos="slide-right" data-aos-duration="900">
+              <div class="card"   >
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={cybercomb} alt="Placeholder image"></img>
@@ -805,7 +806,7 @@ function Competitionsmodel() {
               </div>
             </div>
             <div class="column">
-              <div class="card" data-aos="slide-right" data-aos-duration="900">
+              <div class="card"   >
 
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
@@ -834,7 +835,7 @@ function Competitionsmodel() {
           </div>
           <div class="columns">
             <div class="column">
-              <div class="card" data-aos="slide-right" data-aos-duration="900">
+              <div class="card"   >
                 <div class="card-image comp-img ">
                   <figure class="image is-4by3">
                     <img src={intellect} alt="Placeholder image"></img>
@@ -869,6 +870,7 @@ function Competitionsmodel() {
               data-aos="slide-right"
               data-aos-duration="900"
             ></div>
+          </div>
           </div>
         </div>
       </section>

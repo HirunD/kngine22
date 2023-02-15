@@ -5,6 +5,7 @@ html{
     background-size: 2000px;
     background-blend-mode: screen;
     scroll-behavior: smooth;
+    font-size: 0.7rem;
     /* opacity: 90%; */
 }
 @font-face {
@@ -33,6 +34,19 @@ html{
 ::-webkit-scrollbar-thumb:hover {
   background: white;
   /* width: 6px;  */
+}
+.subtitle{
+  font-size: 1rem;
+}
+.title.is-4{
+  margin-bottom: 0.5vh;
+}
+.title:not(.is-spaced)+.subtitle{
+  margin-top: 1vh;
+}
+.white-text{
+  font-size: 1.3rem !important;
+  word-spacing: 0.5rem;
 }
 
 .loading{
@@ -191,12 +205,14 @@ html{
 .planet{
     animation: planetery 4s infinite;
     width: 80vw;
+    transition: 1s;
+    margin-bottom: 0vh;
   }
 
   @keyframes planetery {
-    0%{bottom: -5vw;}
-    50%{bottom: -8vw;}
-    100%{bottom: -5vw;}
+    0%{margin-bottom: -5vh;}
+    50%{margin-bottom: -10vh;}
+    100%{margin-bottom: -5vh;}
   }
 
   .planet:hover{
@@ -298,9 +314,12 @@ html{
   }
 
   .cliped{
-    height: 18rem;
+    height: 19rem;
     width: 110vw;
-    overflow: hidden;
+    overflow: visible;
+  }
+  .footer{
+    padding-bottom: 20vh;
   }
 
   .heor{
@@ -572,13 +591,32 @@ html{
     margin-left: 25vw;
     width: 50vw;
   }
-  .clipped{
-    margin-bottom: 5vh;
+  .subtitle{
+    font-size: 0.5rem;
+  }
+  .title.is-4{
+    font-size: 1.4rem;
+    margin-bottom: 0.2vh;
+  }
+  .title:not(.is-spaced)+.subtitle{
+    margin-top: 1vh;
+  }
+  .white-text{
+    font-size: 0.8rem !important;
   }
 }
 
 
 @media (max-width: 385px) {
+  
+  .footer.curved{
+    font-size: 0.6rem;
+  }
+  .white-text{
+    font-size: 0.5rem!important;
+    /* margin-left: 10%; */
+  }
+  
   .countdown{
     display: none;
   }
@@ -599,6 +637,7 @@ html{
     opacity: 100%;
     right: -180px;
     transition: 1s;
+    animation: planetery 4s infinite;
   }
   
 .comp-full{
@@ -655,7 +694,7 @@ html{
   margin-left: 10vw;
 }
 .footer{
-  bottom: 20vh ;
+  bottom: -15vh ;
   display: inherit;
 }
 }
