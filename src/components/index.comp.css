@@ -91,7 +91,6 @@ html{
 .sec-comp{
   background-color: rgba(0, 0, 0, 0.362);
   box-shadow: 0 0 150px 150px rgba(0, 0, 0, 0.834);
-  z-index: 10;
 }
 
 
@@ -190,14 +189,8 @@ html{
   100%{top: 155vh;}
 }
 .planet{
-    position: fixed;
-    right: -10vw;
-    width: 70vw;
-    bottom: 4.5vw;
     animation: planetery 4s infinite;
-    opacity: 70%;
-    transition: 3s;
-    z-index: 30;
+    width: 80vw;
   }
 
   @keyframes planetery {
@@ -213,7 +206,6 @@ html{
   .countdown{
     position: relative;
     /* right: -5vw; */
-    top: -10vw;
     z-index: 20;
     /* transition: 5s; */
     color: rgba(255, 255, 255, 0.326);
@@ -581,7 +573,7 @@ html{
     width: 50vw;
   }
   .clipped{
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
   }
 }
 
@@ -606,6 +598,7 @@ html{
     height: 50vh;
     opacity: 100%;
     right: -180px;
+    transition: 1s;
   }
   
 .comp-full{

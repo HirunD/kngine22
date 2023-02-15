@@ -1,4 +1,6 @@
-import React from "react";
+
+/* eslint-disable */
+import React, { useState, useEffect } from "react";
 // import "bulma/css/bulma.min.css";
 // import styles from "./index.comp.css";
 import "./index.comp.css";
@@ -24,9 +26,7 @@ import s1 from "../img/speakers/SuvinNimnaka.png";
 import throwbacks from "../img/comp_icons/Dexigner.png";
 import about from "../img/comp_icons/Intellect.png";
 import "../components/Navbar.css";
-import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { useCountdown } from "../hooks/useCountdown";
 
 // import firebase from 'firebase/app';
@@ -127,10 +127,11 @@ import { useCountdown } from "../hooks/useCountdown";
 //     })
 //   };
 
-  
+
 // }
 
-export default function useCompetitionsmodel() {
+function Competitionsmodel() {
+
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   let navbar = document.getElementById("nav");
@@ -229,16 +230,16 @@ export default function useCompetitionsmodel() {
   const handleClosef4 = () => {
     setFormOpen4("");
   };
-   // form 5
-   const [formOpen5, setFormOpen5] = useState("");
+  // form 5
+  const [formOpen5, setFormOpen5] = useState("");
 
-   const handleClickf5 = () => {
-     setFormOpen5("is-active");
-   };
- 
-   const handleClosef5 = () => {
-     setFormOpen5("");
-   };
+  const handleClickf5 = () => {
+    setFormOpen5("is-active");
+  };
+
+  const handleClosef5 = () => {
+    setFormOpen5("");
+  };
   const [modalOpennav, setModalOpennav] = useState("");
   const [modalOpenmenu, setModalOpenmenu] = useState("");
   const [modalOpennavclose, setModalOpennavclose] = useState("hide");
@@ -283,18 +284,7 @@ export default function useCompetitionsmodel() {
     }, 3000);
   });
 
-  useEffect(() => {
-    const onScroll = (event) => {
-      if (event.target.scrollingElement.scrollTop > 30) {
-        AOS.init({
-          duration: 1000,
-        });
-      } else {
-        console.log("less than ");
-      }
-    };
-    document.addEventListener("scroll", onScroll);
-  });
+
 
   return (
     <>
@@ -324,7 +314,7 @@ export default function useCompetitionsmodel() {
           src={loader}
           class="load-img"
           data-aos="zoom-out"
-          data-aos-duration="10000"
+          data-aos-duration="900"
         ></img>
       </div>
       <div class="navbar is-fixed-top" data-aos="zoom-out">
@@ -395,22 +385,22 @@ export default function useCompetitionsmodel() {
           </a>
         </div>
       </div>
+
       <div>
         <section
           id="hero"
-          class="hero is-fullheight is-info"
-          data-aos="zoom-out"
-          data-aos-mirror="true"
+          class="hero is-fullheight"
         >
-          {/* <img src={kngine} class="kngine"></img> */}
-          <img src={planet} class="planet" id="planet"></img>
           <div class="hero-body">
-            <div class="columns ">
-              <div class="column">
-                <h2 class="title countdown" id="count">
-                  {days} : {hours} : {minutes} : {seconds}
+            <div class="columns">
+              <div class="column is-6 is-align-self-center has-text-centered">
+                <h2 class="is-2 has-text-white countdown" id="count">
+                  {days} : {hours}
                 </h2>
-                <h2 class="title countdown-mobile" id="count">
+                <h2 class="is-2 has-text-white countdown" id="count">
+                  {minutes} : {seconds}
+                </h2>
+                <h2 class="is-2 title countdown-mobile" id="count">
                   {days} {hours} {minutes} {seconds}
                 </h2>
                 {/* <hr class="breaker2"></hr>
@@ -419,10 +409,14 @@ export default function useCompetitionsmodel() {
                   {minutes} : {seconds}
                 </h2> */}
               </div>
+              <div class="column is-6 is-align-self-center has-text-centered">
+                <img src={planet} class="planet" id="planet"></img>
+              </div>
             </div>
           </div>
         </section>
       </div>
+      
       <div class="model-holder">
         <div class={`modal ${modalOpen}`}>
           <div class="modal-background"></div>
@@ -679,7 +673,7 @@ export default function useCompetitionsmodel() {
               <img src={cybercomb}></img>
               <hr class="breaker-form"></hr>
               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVb-E41W-6Mqv_2EoxLDjSreMhxD1DzrbePsIRzFI4ctmtCw/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-              </section>
+            </section>
           </div>
         </div>
         <div class={`modal ${formOpen4}`}>
@@ -697,7 +691,7 @@ export default function useCompetitionsmodel() {
               <img src={dexigner}></img>
               <hr class="breaker-form"></hr>
               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMeSe6OoXHTsebKz5CyX25dkRXwAGLfvGghar8OPE-PypUfA/viewform?embedded=true" width="600" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-              </section>
+            </section>
           </div>
         </div>
         <div class={`modal ${formOpen5}`}>
@@ -714,26 +708,25 @@ export default function useCompetitionsmodel() {
             <section class="modal-card-body">
               <img src={intellect}></img>
               <h5>For the students who got a wise knowledge in the ICT field. This competition will be held at the ICT Day without any registrations, anyone can participate.</h5>
-              </section>
+            </section>
           </div>
         </div>
       </div>
       <section
         id="comp"
         class="section sec-comp "
-        data-aos="zoom-out"
-        data-aos-mirror="true"
       >
-        <h3 class="title has-text-centered" data-aos="fade-up">
-          Compititions
-        </h3>
-        <h5 class="subtitle has-text-centered" data-aos="fade-up">
-          Submit your projects before 23:59 26 February 2023
-        </h5>
-        <div class="container is-widescreen"data-aos="fade-up">
-          <div class="columns" >
-            <div class="column" >
-              <div class="card">
+        <div class="container is-widescreen">
+          <h3 class="title has-text-centered mt-5" data-aos="fade-up" data-aos-duration="900">
+            Compititions
+          </h3>
+          <h5 class="subtitle has-text-centered mb-5" data-aos="fade-up">
+            Submit your projects before 23:59 26 February 2023
+          </h5>
+          <div class="columns mt-6">
+            <div class="column">
+              <div class="card" data-aos="slide-right" data-aos-duration="900">
+
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={code_com} alt="Placeholder image"></img>
@@ -785,8 +778,8 @@ export default function useCompetitionsmodel() {
                 </footer>
               </div>
             </div> */}
-            <div class="column"  >
-              <div class="card">
+            <div class="column">
+              <div class="card" data-aos="slide-right" data-aos-duration="900">
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={cybercomb} alt="Placeholder image"></img>
@@ -811,8 +804,9 @@ export default function useCompetitionsmodel() {
                 </footer>
               </div>
             </div>
-            <div class="column"  >
-              <div class="card">
+            <div class="column">
+              <div class="card" data-aos="slide-right" data-aos-duration="900">
+
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={dexigner} alt="Placeholder image"></img>
@@ -839,8 +833,8 @@ export default function useCompetitionsmodel() {
             </div>
           </div>
           <div class="columns">
-            <div class="column"  >
-              <div class="card">
+            <div class="column">
+              <div class="card" data-aos="slide-right" data-aos-duration="900">
                 <div class="card-image comp-img ">
                   <figure class="image is-4by3">
                     <img src={intellect} alt="Placeholder image"></img>
@@ -868,17 +862,17 @@ export default function useCompetitionsmodel() {
             <div
               class="column"
               data-aos="slide-right"
-              data-aos-duration="1000"
+              data-aos-duration="900"
             ></div>
             <div
               class="column"
               data-aos="slide-right"
-              data-aos-duration="1000"
+              data-aos-duration="900"
             ></div>
           </div>
         </div>
       </section>
-      <hr class="breaker" data-aos="zoom-in"></hr>
+      <hr class="breaker" data-aos="zoom-in" data-aos-duration="900"></hr>
       <section
         id="speakers"
         class="section "
@@ -888,7 +882,7 @@ export default function useCompetitionsmodel() {
         <div>
           <div class="container">
             <h3 class="title has-text-centered" data-aos="slide-right">
-              FEATURING
+              SPEAKERS
             </h3>
           </div>
           <div class="columns">
@@ -899,7 +893,7 @@ export default function useCompetitionsmodel() {
                     <img
                       class="speakers-img is-rounded"
                       src={s1}
-                      // src="https://bulma.io/images/placeholders/256x256.png"
+                    // src="https://bulma.io/images/placeholders/256x256.png"
                     ></img>
                   </div>
                 </figure>
@@ -916,7 +910,7 @@ export default function useCompetitionsmodel() {
                     <img
                       class="speakers-img is-rounded"
                       src={s1}
-                      // src="https://bulma.io/images/placeholders/256x256.png"
+                    // src="https://bulma.io/images/placeholders/256x256.png"
                     ></img>
                   </div>
                 </figure>
@@ -933,7 +927,7 @@ export default function useCompetitionsmodel() {
                     <img
                       class="speakers-img is-rounded"
                       src={s1}
-                      // src="https://bulma.io/images/placeholders/256x256.png"
+                    // src="https://bulma.io/images/placeholders/256x256.png"
                     ></img>
                   </div>
                 </figure>
@@ -1046,8 +1040,7 @@ export default function useCompetitionsmodel() {
             <p
               class="white-text mt-6 is-size-4 has-text-justified"
               data-aos="fade-up"
-              data-aos-offset="500"
-              data-aos-duration="2000"
+              data-aos-duration="900"
             >
               RITS, the Richmond College IT Society, which was established a few
               decades ago, today dominates all of the island's school IT
@@ -1088,3 +1081,4 @@ export default function useCompetitionsmodel() {
     </>
   );
 }
+export default Competitionsmodel;
