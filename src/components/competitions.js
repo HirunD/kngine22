@@ -297,24 +297,24 @@ function Competitionsmodel() {
         ></img>
       </div>
       <div class="full feat-full">
-        <img src={rock} data-aos="zoom-out-left" data-aos-duration="5000"></img>
+        <img src={rock} data-aos="zoom-out-left"  ="5000"></img>
       </div>
       <div class="full throw-full">
         <img
           src={station}
           data-aos="zoom-out-left"
-          data-aos-duration="5000"
+           ="5000"
         ></img>
       </div> */}
       {/* <div class="full abt-full">
-        <img src={ISS} data-aos="zoom-out-left" data-aos-duration="5000"></img>
+        <img src={ISS} data-aos="zoom-out-left"  ="5000"></img>
       </div> */}
       <div class={`loading ${loadervisible}`}>
         <img
           src={loader}
           class="load-img"
           data-aos="zoom-out"
-          data-aos-duration="900"
+          
         ></img>
       </div>
       <div class="navbar is-fixed-top" data-aos="zoom-out">
@@ -720,13 +720,13 @@ function Competitionsmodel() {
         class="section sec-comp "
       >
         <div class="container is-widescreen">
-          <h3 class="title has-text-centered mt-5" data-aos="fade-up" data-aos-duration="900">
+          <h3 class="title has-text-centered mt-5" data-aos="fade-up"  >
             Compititions
           </h3>
           <h5 class="subtitle has-text-centered mb-5" data-aos="fade-up">
             Submit your projects before 23:59 26 February 2023
           </h5>
-          <div className="container" data-aos="fade" data-aos-duration="1000">
+          <div className="container" data-aos="fade"   >
           <div class="columns mt-6">
             <div class="column">
               <div class="card" >
@@ -865,19 +865,17 @@ function Competitionsmodel() {
             </div>
             <div
               class="column"
-              data-aos="slide-right"
-              data-aos-duration="900"
+               
             ></div>
             <div
               class="column"
-              data-aos="slide-right"
-              data-aos-duration="900"
+               
             ></div>
           </div>
           </div>
         </div>
       </section>
-      <hr class="breaker" data-aos="zoom-in" data-aos-duration="900"></hr>
+      <hr class="breaker" data-aos="zoom-in"  ></hr>
       <section
         id="speakers"
         class="section "
@@ -886,12 +884,12 @@ function Competitionsmodel() {
       >
         <div>
           <div class="container">
-            <h3 class="title has-text-centered" data-aos="slide-right">
+            <h3 class="title has-text-centered">
               SPEAKERS
             </h3>
           </div>
           <div class="columns">
-            <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
+            <div class="column mt-6"    >
               <div class="hover">
                 <figure class="card-image has-text-centered is-128x128">
                   <div class="speakers-div is-rounded">
@@ -908,7 +906,7 @@ function Competitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
+            <div class="column mt-6"    >
               <div class="hover">
                 <figure class="card-image has-text-centered is-128x128 is-square">
                   <div class="speakers-div is-rounded">
@@ -925,7 +923,7 @@ function Competitionsmodel() {
                 </div>
               </div>
             </div>
-            <div class="column mt-6" data-aos="fade-up" data-aos-offset="500">
+            <div class="column mt-6"    >
               <div class="hover">
                 <figure class="card-image has-text-centered is-128x128">
                   <div class="speakers-div is-rounded">
@@ -954,12 +952,12 @@ function Competitionsmodel() {
       >
         <div>
           <div class="container">
-            <h3 class="title has-text-centered" data-aos="slide-right">
+            <h3 class="title has-text-centered">
               Throwback
             </h3>
             <div class="columns">
               <div class="column mr-6">
-                <div class="card" data-aos="fade-up" data-aos-offset="500">
+                <div class="card"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
                       <img src={kngine17} alt="Placeholder image"></img>
@@ -974,7 +972,7 @@ function Competitionsmodel() {
                     </div>
                   </div>
                 </div>
-                <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
+                <div class="card mt-6"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
                       <img src={kngine13} alt="Placeholder image"></img>
@@ -991,7 +989,7 @@ function Competitionsmodel() {
                 </div>
               </div>
               <div class="column">
-                <div class="card" data-aos="fade-up" data-aos-offset="500">
+                <div class="card"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
                       <img src={kngine15} alt="Placeholder image"></img>
@@ -1006,7 +1004,7 @@ function Competitionsmodel() {
                     </div>
                   </div>
                 </div>
-                <div class="card mt-6" data-aos="fade-up" data-aos-offset="500">
+                <div class="card mt-6"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
                       <img src={kngine12} alt="Placeholder image"></img>
@@ -1033,19 +1031,17 @@ function Competitionsmodel() {
         id="about"
         class="section mb-6 moremargin"
         data-aos="zoom-out"
-        data-aos-mirror="true"
       >
         <div class="container box box-padding">
           <div class="container has-text-centered">
-            <h1 class="title is-1 has-text-weight-bold" data-aos="slide-right">
+            <h1 class="title is-1 has-text-weight-bold">
               About Us
             </h1>
           </div>
           <div class="container is-fluid">
             <p
               class="white-text mt-6 is-size-4 has-text-justified"
-              data-aos="fade-up"
-              data-aos-duration="900"
+               
             >
               RITS, the Richmond College IT Society, which was established a few
               decades ago, today dominates all of the island's school IT
@@ -1065,8 +1061,8 @@ function Competitionsmodel() {
         </div>
       </section>
       <div></div>
-      <hr class="breaker" data-aos="zoom-in"></hr>
-      <div class=" cliped aos-animate" data-aos="zoom-out">
+      <hr class="breaker"></hr>
+      <div class=" cliped aos-animate" data-aos="zoom-out" data-aos-anchor="#about">
         <footer class="footer curved">
           <div class="content has-text-centered">
             <a

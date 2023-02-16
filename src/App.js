@@ -11,7 +11,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      offset: 10,
+    });
   }, []);
 
   return (

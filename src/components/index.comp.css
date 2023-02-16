@@ -320,6 +320,7 @@ body{
   .cliped{
     height: 19rem;
     width: 110vw;
+    margin-bottom: 0vh;
     overflow: hidden;
   }
   .footer{
@@ -348,7 +349,7 @@ body{
 
   .footer{
     position: relative;
-    bottom: -20vh ;
+    bottom: -12vh ;
   }
 
   .hover{
