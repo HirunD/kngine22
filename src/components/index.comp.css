@@ -8,6 +8,9 @@ html{
     font-size: 0.7rem;
     /* opacity: 90%; */
 }
+body{
+  font-size: 0.8rem;
+}
 @font-face {
   font-family: "Centuri";   /*Can be any text*/
   src: local("Centuri"),
@@ -40,12 +43,13 @@ html{
 }
 .title.is-4{
   margin-bottom: 0.5vh;
+  font-size: 2.4rem;
 }
 .title:not(.is-spaced)+.subtitle{
   margin-top: 1vh;
 }
 .white-text{
-  font-size: 1.3rem !important;
+  font-size: 1rem !important;
   word-spacing: 0.5rem;
 }
 
@@ -316,7 +320,7 @@ html{
   .cliped{
     height: 19rem;
     width: 110vw;
-    overflow: visible;
+    overflow: hidden;
   }
   .footer{
     padding-bottom: 20vh;
@@ -466,6 +470,7 @@ html{
   display: none;
 }
 .fa{
+  padding: 1% 1%;
   font-size: 30px;
   margin-left: 1%;
   color: rgb(169, 169, 169);
@@ -482,6 +487,9 @@ html{
   color: rgb(255, 255, 255);
   transform: scale(110%);
 }
+p{
+  padding: 1% 1%;
+}
 .modal-card{
   width: 70vw;
 }
@@ -493,6 +501,12 @@ html{
 }
 .content{
   height: 10vh;
+}
+.cosmos{
+  /* width: 1vw; */
+  margin-left: 55vw;
+  padding-top: 0vh;
+  padding-right: 0vw;
 }
 
 @media (max-width: 1114px) {
@@ -521,8 +535,16 @@ html{
 
 @media (max-width:800px) {
   .navbar-item{
-    margin-left: 75vw;
-    margin-top: -6vh;
+    font-size: 1.5rem;
+    padding-left: 7vw;
+  }
+  .subtitle.is-6{
+    font-size: 0.8rem;
+  }
+  .navbar-item{
+    padding-left: 0vw;
+    /* margin-left: 75vw; */
+    /* margin-top: -6vh; */
   }
   .logo{
     display: none;
@@ -591,9 +613,6 @@ html{
     margin-left: 25vw;
     width: 50vw;
   }
-  .subtitle{
-    font-size: 0.5rem;
-  }
   .title.is-4{
     font-size: 1.4rem;
     margin-bottom: 0.2vh;
@@ -602,7 +621,7 @@ html{
     margin-top: 1vh;
   }
   .white-text{
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
   }
 }
 

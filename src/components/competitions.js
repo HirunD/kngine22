@@ -319,7 +319,6 @@ function Competitionsmodel() {
       </div>
       <div class="navbar is-fixed-top" data-aos="zoom-out">
         <div class="navbar-brand">
-        
           <a
             role="button"
             class={`navbar-burger nav-open ${modalOpennav} ${modalOpenmenu}`}
@@ -342,8 +341,12 @@ function Competitionsmodel() {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
+          <a class="navbar-item cosmos">
+      <img src={cosmos} width="112" height="28"></img>
+    </a>
         </div>
         <div class={`navbar-menu ${modalOpenmenu}`} onClick={handleClosenav}>
+        
           <a class="navbar-item" href="#comp">
             COMPITIONS
           </a>
@@ -357,11 +360,11 @@ function Competitionsmodel() {
             ABOUT US
           </a>
         </div>
-        <div class="navbar-end">
-        <a class="navbar-item">
-      <img src={cosmos} width="112" height="28"></img>
-    </a>
-        </div>
+        {/* <div class="navbar-menu">
+          <div className="navabar-end">
+        
+    </div>
+        </div> */}
       </div>
       <div class="nav " id="nav" data-aos="slide-right">
         <div class="glass div " id="n1">
@@ -1063,7 +1066,7 @@ function Competitionsmodel() {
       </section>
       <div></div>
       <hr class="breaker" data-aos="zoom-in"></hr>
-      <div class=" cliped" data-aos="zoom-out">
+      <div class=" cliped aos-animate" data-aos="zoom-out">
         <footer class="footer curved">
           <div class="content has-text-centered">
             <a
