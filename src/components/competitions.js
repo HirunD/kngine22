@@ -317,7 +317,7 @@ function Competitionsmodel() {
           
         ></img>
       </div>
-      <div class="navbar is-fixed-top" data-aos="zoom-out">
+      <div class="navbar is-fixed-top" data-aos="zoom-out" data-aos-anchor-placement="top-center">
         <div class="navbar-brand">
           <a
             role="button"
@@ -366,7 +366,7 @@ function Competitionsmodel() {
     </div>
         </div> */}
       </div>
-      <div class="nav " id="nav" data-aos="slide-right">
+      <div class="nav " id="nav" data-aos="slide-right" data-aos-anchor-placement="top-center">
         <div class="glass div " id="n1">
           <a href="#comp" class="title is-6 nav-t">
             Competitions
@@ -378,7 +378,7 @@ function Competitionsmodel() {
           </a>
         </div>
         <div class="glass div " id="n3">
-          <a href="#throwbacks" class="title is-6 nav-t" data-aos="slide-right">
+          <a href="#throwbacks" class="title is-6 nav-t" data-aos="slide-right" data-aos-anchor-placement="top-center">
             Throwback
           </a>
         </div>
@@ -720,13 +720,13 @@ function Competitionsmodel() {
         class="section sec-comp "
       >
         <div class="container is-widescreen">
-          <h3 class="title has-text-centered mt-5" data-aos="fade-up"  >
+          <h3 class="title has-text-centered mt-5" data-aos="fade-up" data-aos-anchor-placement="top-center" >
             Compititions
           </h3>
-          <h5 class="subtitle has-text-centered mb-5" data-aos="fade-up">
+          <h5 class="subtitle has-text-centered mb-5" data-aos="fade-up" data-aos-anchor-placement="top-center">
             Submit your projects before 23:59 26 February 2023
           </h5>
-          <div className="container" data-aos="fade"   >
+          <div className="container" data-aos="fade"   data-aos-anchor-placement="top-center">
           <div class="columns mt-6">
             <div class="column">
               <div class="card" >
@@ -875,12 +875,12 @@ function Competitionsmodel() {
           </div>
         </div>
       </section>
-      <hr class="breaker" data-aos="zoom-in"  ></hr>
+      <hr class="breaker" data-aos="zoom-in" data-aos-anchor-placement="top-center" ></hr>
       <section
         id="speakers"
         class="section "
         data-aos="zoom-out"
-        data-aos-mirror="true"
+        data-aos-anchor-placement="top-center"
       >
         <div>
           <div class="container">
@@ -948,7 +948,7 @@ function Competitionsmodel() {
         id="throwbacks"
         class="section "
         data-aos="zoom-out"
-        data-aos-mirror="true"
+        data-aos-anchor-placement="top-center"
       >
         <div>
           <div class="container">
@@ -1031,6 +1031,7 @@ function Competitionsmodel() {
         id="about"
         class="section mb-6 moremargin"
         data-aos="zoom-out"
+        data-aos-anchor-placement="top-center"
       >
         <div class="container box box-padding">
           <div class="container has-text-centered">

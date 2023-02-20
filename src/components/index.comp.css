@@ -5,16 +5,11 @@ html{
     background-size: 2000px;
     background-blend-mode: screen;
     scroll-behavior: smooth;
-    font-size: 0.7rem;
+    font-size: 1rem;
     /* opacity: 90%; */
 }
 body{
   font-size: 0.8rem;
-}
-@font-face {
-  font-family: "Centuri";   /*Can be any text*/
-  src: local("Centuri"),
-    url("../../src/fonts/Centuri.ttf") format("truetype");
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -240,7 +235,7 @@ body{
     z-index: 20;
     /* transition: 5s; */
     color: rgba(255, 255, 255, 0.326);
-    font-family: "Centuri";
+    /* font-family: "Centuri"; */
     font-size: 5rem;
   }
 /* .planet:hover + .countdown{

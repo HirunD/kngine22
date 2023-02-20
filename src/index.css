@@ -1,11 +1,11 @@
 /* Import Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+/* 
 /* Custom Fonts */
 @font-face {
   font-family: Centuri;
   src: url("./fonts/Centuri.ttf");
-}
+} */
 
 body {
   margin: 0;
