@@ -11,6 +11,7 @@ import rock from "../img/rock.png";
 import ISS from "../img/ISS.png";
 import station from "../img/station.png";
 import loader from "../img/loader2.png";
+import loader_mobile from "../img/loader3.jpg";
 import code_com from "../img/comp_icons/code_com.png";
 import cybercomb from "../img/comp_icons/Cybercomb.png";
 import dexigner from "../img/comp_icons/Dexigner.png";
@@ -310,9 +311,17 @@ function Competitionsmodel() {
       {/* <div class="full abt-full">
         <img src={ISS} data-aos="zoom-out-left"  ="5000"></img>
       </div> */}
-      <div class={`loading ${loadervisible}`}>
+      <div class={`loading ${loadervisible} desktop-load`}>
         <img
           src={loader}
+          class="load-img"
+          data-aos="zoom-out"
+          
+        ></img>
+      </div>
+      <div class={`loading ${loadervisible} loader-mobile`}>
+        <img
+          src={loader_mobile}
           class="load-img"
           data-aos="zoom-out"
           
@@ -728,7 +737,7 @@ function Competitionsmodel() {
             Submit your projects before 23:59 26 February 2023
           </h5>
           <div className="container" data-aos="fade"   data-aos-anchor-placement="top-center">
-          <div class="columns mt-6 is-mobile">
+          <div class="columns mt-6 ">
             <div class="column">
               <div class="card" >
 
@@ -837,7 +846,7 @@ function Competitionsmodel() {
               </div>
             </div>
           </div>
-          <div class="columns is-mobile">
+          <div class="columns  ">
             <div class="column">
               <div class="card"   >
                 <div class="card-image comp-img ">
@@ -939,7 +948,7 @@ function Competitionsmodel() {
             <h3 class="title has-text-centered">
               Throwback
             </h3>
-            <div class="columns is-mobile pb-5">
+            <div class="columns    pb-5">
               <div class="column ">
                 <div class="card mb-6"    >
                   <div class="card-image">

@@ -71,17 +71,31 @@ body{
   animation: blip 0.5s infinite;
   /* opacity: 20%; */
 }
+.loader-mobile .load-img{
+  height: 60%;
+  position: absolute;
+  left: 25vw;
+  top: 25vh;
+  animation: bloop 4s infinite cubic-bezier(0.71, 0.03, 0.14, 0.98);
+  /* opacity: 20%; */
+}
 
 @keyframes blip {
   0%{opacity: 20%;}
   50%{opacity: 70%;}
   100%{opacity: 20%;}
 }
+@keyframes bloop {
+  0%{transform: scale(0%);
+  opacity: 0%;}
+  50%{transform: scale(120%);
+    opacity: 100%;}
+  100%{transform: scale(100%);}
+}
 
 .hide-load{
   display: none;
 }
-
 .container{
     background-color: rgb(1, 6, 9);
 }
@@ -528,6 +542,9 @@ p{
 .footer{
   bottom: -20vh;
 }
+.loader-mobile{
+  display: none;
+}
 
 @media (max-width: 1114px) {
   .footer{
@@ -560,6 +577,15 @@ p{
 
 
 @media (max-width:800px) {
+  .desktop-load{
+    display: none;
+  }
+  .loader-mobile{
+    display: block;
+  }
+  .hide-load{
+    display: none;
+  }
   .mobile{
     display: block;
   }
@@ -584,13 +610,21 @@ p{
   .kngine{
     display: none;
   }
-  .card{
-    width: 10vw;
-    
-  }
-  .card{
-    margin-left: 1vw;
-  }
+  
+.card{
+  width: 70vw;
+  margin-left: 10vw;
+}
+.card .card-content{
+  margin-bottom: -6vh;
+  padding-top: 1vh;
+}
+.card .media:not(:last-child){
+  margin-bottom: 2vh;
+}
+.mb-6{
+  margin-bottom: 13vh!important;
+}
  
   #nav{
     display: none;
@@ -644,10 +678,6 @@ p{
   .modal-card{
     width: 70vw;
     margin-left: -15vw;
-  }
-  .card{
-    margin-left: 1vw;
-    width: 50vw;
   }
   .title.is-4{
     font-size: 1rem;
@@ -749,27 +779,9 @@ p{
   width: 75vw;
 }
 
-.card{
-  width: 27vw;
-  margin-left: 0vw;
-  font-size: 0.5rem;
-}
-.card .card-content{
-  margin-bottom: -6vh;
-  padding-top: 1vh;
-}
-.card .media:not(:last-child){
-  margin-bottom: 2vh;
-}
-.mb-6{
-  margin-bottom: 13vh!important;
-}
 .footer{
   bottom: -25vh ;
   display: inherit;
-}
-.throw-cont .card{
-  width: 25vh;
 }
 }
 
