@@ -378,7 +378,7 @@ function Competitionsmodel() {
           </a>
         </div>
         <div class="glass div " id="n3">
-          <a href="#throwbacks" class="title is-6 nav-t" data-aos="slide-right" data-aos-anchor-placement="top-center">
+          <a href="#throwbacks" class="title is-6 nav-t">
             Throwback
           </a>
         </div>
@@ -873,8 +873,8 @@ function Competitionsmodel() {
             ></div>
           </div>
           </div>
-          <div className="container" data-aos="fade"   data-aos-anchor-placement="top-center">
-          <div class="columns mt-6">
+          <div className="container mobile" data-aos="fade"   data-aos-anchor-placement="top-center">
+          <div class="columns mt-6 is-mobile">
             <div class="column">
               <div class="card" >
 
@@ -902,35 +902,8 @@ function Competitionsmodel() {
                 </footer>
               </div>
             </div>
-
-            {/* <div class="column"  >
-              <div class="card">
-                <div class="card-image comp-img">
-                  <figure class="image is-4by3">
-                    <img src={web_dezigner} alt="Placeholder image"></img>
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4">web deZign</p>
-                    </div>
-                  </div>
-
-                  <div class="content">Web Designing competition</div>
-                </div>
-                <footer class="card-footer">
-                  <a onClick={handleClickf2} class="card-footer-item">
-                    Register
-                  </a>
-                  <a onClick={handleClick1} class="card-footer-item">
-                    More Info
-                  </a>
-                </footer>
-              </div>
-            </div> */}
             <div class="column">
-              <div class="card"   >
+            <div class="card"   >
                 <div class="card-image comp-img">
                   <figure class="image is-4by3">
                     <img src={cybercomb} alt="Placeholder image"></img>
