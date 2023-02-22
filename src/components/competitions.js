@@ -23,6 +23,7 @@ import kngine13 from "../img/throwback/kngine13.jpg";
 import kngine12 from "../img/throwback/kngine12.jpg";
 
 import s1 from "../img/speakers/SuvinNimnaka.png";
+import s2 from "../img/speakers/MaheepaD.png";
 import throwbacks from "../img/comp_icons/Dexigner.png";
 import about from "../img/comp_icons/Intellect.png";
 import "../components/Navbar.css";
@@ -404,7 +405,7 @@ function Competitionsmodel() {
                   {minutes} : {seconds}
                 </h2>
                 <h2 class="is-2 title countdown-mobile" id="count">
-                  {days} {hours} {minutes} {seconds}
+                  {days} : {hours} : {minutes} : {seconds}
                 </h2>
                 {/* <hr class="breaker2"></hr>
                 <hr class="breaker3"></hr>
@@ -727,7 +728,7 @@ function Competitionsmodel() {
             Submit your projects before 23:59 26 February 2023
           </h5>
           <div className="container" data-aos="fade"   data-aos-anchor-placement="top-center">
-          <div class="columns mt-6">
+          <div class="columns mt-6 is-mobile">
             <div class="column">
               <div class="card" >
 
@@ -836,127 +837,7 @@ function Competitionsmodel() {
               </div>
             </div>
           </div>
-          <div class="columns">
-            <div class="column">
-              <div class="card"   >
-                <div class="card-image comp-img ">
-                  <figure class="image is-4by3">
-                    <img src={intellect} alt="Placeholder image"></img>
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4">Intellect</p>
-                    </div>
-                  </div>
-
-                  <div class="content">Quiz competition</div>
-                </div>
-                <footer class="card-footer">
-                  <a onClick={handleClickf5} class="card-footer-item">
-                    Register
-                  </a>
-                  <a onClick={handleClick4} class="card-footer-item">
-                    More Info
-                  </a>
-                </footer>
-              </div>
-            </div>
-            <div
-              class="column"
-               
-            ></div>
-            <div
-              class="column"
-               
-            ></div>
-          </div>
-          </div>
-          <div className="container mobile" data-aos="fade"   data-aos-anchor-placement="top-center">
-          <div class="columns mt-6 is-mobile">
-            <div class="column">
-              <div class="card" >
-
-                <div class="card-image comp-img">
-                  <figure class="image is-4by3">
-                    <img src={code_com} alt="Placeholder image"></img>
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4">Code_com</p>
-                    </div>
-                  </div>
-
-                  <div class="content">Programming competition</div>
-                </div>
-                <footer class="card-footer">
-                  <a onClick={handleClickf1} class="card-footer-item">
-                    Register
-                  </a>
-                  <a onClick={handleClick} class="card-footer-item">
-                    More Info
-                  </a>
-                </footer>
-              </div>
-            </div>
-            <div class="column">
-            <div class="card"   >
-                <div class="card-image comp-img">
-                  <figure class="image is-4by3">
-                    <img src={cybercomb} alt="Placeholder image"></img>
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4">Cyber Combat</p>
-                    </div>
-                  </div>
-
-                  <div class="content">Gaming Comepetition</div>
-                </div>
-                <footer class="card-footer">
-                  <a onClick={handleClickf3} class="card-footer-item">
-                    Register
-                  </a>
-                  <a onClick={handleClick2} class="card-footer-item">
-                    More Info
-                  </a>
-                </footer>
-              </div>
-            </div>
-            <div class="column">
-              <div class="card"   >
-
-                <div class="card-image comp-img">
-                  <figure class="image is-4by3">
-                    <img src={dexigner} alt="Placeholder image"></img>
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4">deXigner</p>
-                    </div>
-                  </div>
-
-                  <div class="content">Graphic Designing competition</div>
-                </div>
-                <footer class="card-footer">
-                  <a onClick={handleClickf4} class="card-footer-item">
-                    Register
-                  </a>
-                  <a onClick={handleClick3} class="card-footer-item">
-                    More Info
-                  </a>
-                </footer>
-              </div>
-            </div>
-          </div>
-          <div class="columns">
+          <div class="columns is-mobile">
             <div class="column">
               <div class="card"   >
                 <div class="card-image comp-img ">
@@ -1032,31 +913,14 @@ function Competitionsmodel() {
                   <div class="speakers-div is-rounded">
                     <img
                       class="speakers-img is-rounded"
-                      src={s1}
+                      src={s2}
                     // src="https://bulma.io/images/placeholders/256x256.png"
                     ></img>
                   </div>
                 </figure>
                 <div class="media-content has-text-centered">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-            </div>
-            <div class="column mt-6"    >
-              <div class="hover">
-                <figure class="card-image has-text-centered is-128x128">
-                  <div class="speakers-div is-rounded">
-                    <img
-                      class="speakers-img is-rounded"
-                      src={s1}
-                    // src="https://bulma.io/images/placeholders/256x256.png"
-                    ></img>
-                  </div>
-                </figure>
-                <div class="media-content has-text-centered">
-                  <p class="title is-4">Suvin Nimnaka</p>
-                  <p class="subtitle is-6">Software Engineer</p>
+                  <p class="title is-4">Maheepa Daham</p>
+                  <p class="subtitle is-6">dont know who</p>
                 </div>
               </div>
             </div>
@@ -1071,13 +935,13 @@ function Competitionsmodel() {
         data-aos-anchor-placement="top-center"
       >
         <div>
-          <div class="container">
+          <div class="container throw-cont">
             <h3 class="title has-text-centered">
               Throwback
             </h3>
-            <div class="columns">
-              <div class="column mr-6">
-                <div class="card"    >
+            <div class="columns is-mobile pb-5">
+              <div class="column ">
+                <div class="card mb-6"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
                       <img src={kngine17} alt="Placeholder image"></img>
@@ -1108,8 +972,8 @@ function Competitionsmodel() {
                   </div>
                 </div>
               </div>
-              <div class="column">
-                <div class="card"    >
+              <div class="column ">
+                <div class="card mb-6"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
                       <img src={kngine15} alt="Placeholder image"></img>

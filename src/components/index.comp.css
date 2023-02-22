@@ -11,6 +11,11 @@ html{
 body{
   font-size: 0.8rem;
 }
+@font-face {
+  font-family: Countdown;
+  src: url(../fonts/Countdown\ Normal.ttf);
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   transition: 1s;
@@ -227,9 +232,9 @@ body{
     /* right: -5vw; */
     z-index: 20;
     /* transition: 5s; */
+    font-family: "Countdown";
     color: rgba(255, 255, 255, 0.326);
-    font-family: "Centuri";
-    font-size: 5rem;
+    font-size: 8rem;
   }
 
   .countdown-mobile{
@@ -319,11 +324,11 @@ body{
   .cliped{
     height: 19rem;
     width: 110vw;
-    margin-bottom: 0vh;
     overflow: hidden;
   }
   .footer{
     padding-bottom: 20vh;
+    bottom: -25vh;
   }
 
   .heor{
@@ -348,7 +353,7 @@ body{
 
   .footer{
     position: relative;
-    bottom: -12vh ;
+    bottom: -25vh ;
   }
 
   .hover{
@@ -427,22 +432,34 @@ body{
 }
 
 .comp-img .image.is-4by3 img{
-  height: 90%;
+  height: 50%;
   width: 90%;
   padding-left: 10%; 
-  padding-top: 10%; 
+  margin-top: 20%; 
   transition: 1s;
   /* height: 100px; */
 }
 
 .comp-img .image.is-4by3 img:hover{
-  height: 100%;
-  width: 100%;
-  transform: rotate(2deg);
-  padding-left: 0%; 
-  padding-top: 0%; 
+  transform: rotate(5deg) scale(110%);
 }
-
+.card:hover{
+  background-color: rgb(12, 15, 37);
+}
+.card:hover a{
+  transition: 0.5s;
+}
+.card:hover a{
+  color: rgb(157, 157, 157);
+  font-weight: 500;
+  font-size: 1rem;
+}
+.card a{
+  transition: 1s;
+}
+.card a:hover{
+  color: rgb(239, 239, 239);
+}
 .throwback-img{
   overflow: hidden;
 }
@@ -508,8 +525,14 @@ p{
   padding-top: 0vh;
   padding-right: 0vw;
 }
+.footer{
+  bottom: -20vh;
+}
 
 @media (max-width: 1114px) {
+  .footer{
+    bottom: -25vh;
+  }
   .countdown{
     font-size: 50px;
     left: 10vw;
@@ -560,13 +583,6 @@ p{
   }
   .kngine{
     display: none;
-  }
-  .column{
-    width: 15vh;
-    font-size: 0.5rem;
-  }
-  .title.is-4{
-    font-size: 0.5rem;
   }
   .card{
     width: 10vw;
@@ -647,7 +663,6 @@ p{
 
 
 @media (max-width: 385px) {
-  
   .footer.curved{
     font-size: 0.6rem;
   }
@@ -666,13 +681,15 @@ p{
     left: 10vw;
   }
   .countdown-mobile{
-    font-size: 105px;
+    font-size: 6rem!important;
     left: 10vw;
   }
-
+.media-content .title.is-4{
+  font-size: 1.5rem;
+}
   .planet{
-    width: 70vh;
-    height: 50vh;
+    width: 50vh;
+    height: 35vh;
     opacity: 100%;
     right: -180px;
     transition: 1s;
@@ -725,16 +742,34 @@ p{
   width: 90vw;
   margin-left: -45vw;
 }
+.title.is-4{
+  font-size: 0.6rem;
+}
 .iframe{
   width: 75vw;
 }
+
 .card{
-  width: 70vw;
-  margin-left: 10vw;
+  width: 27vw;
+  margin-left: 0vw;
+  font-size: 0.5rem;
+}
+.card .card-content{
+  margin-bottom: -6vh;
+  padding-top: 1vh;
+}
+.card .media:not(:last-child){
+  margin-bottom: 2vh;
+}
+.mb-6{
+  margin-bottom: 13vh!important;
 }
 .footer{
-  bottom: -15vh ;
+  bottom: -25vh ;
   display: inherit;
+}
+.throw-cont .card{
+  width: 25vh;
 }
 }
 
