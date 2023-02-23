@@ -707,11 +707,12 @@ p{
   .countdown-mobile{
     font-size: 50px;
     display: inherit;
-    font-size: 50px;
+    font-size: 20px;
     left: 10vw;
+    font-family: Countdown;
   }
   .countdown-mobile{
-    font-size: 6rem!important;
+    font-size: 5rem!important;
     left: 10vw;
   }
 .media-content .title.is-4{
