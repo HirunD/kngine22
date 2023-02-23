@@ -929,7 +929,7 @@ function Competitionsmodel() {
                 </figure>
                 <div class="media-content has-text-centered">
                   <p class="title is-4">Maheepa Daham</p>
-                  <p class="subtitle is-6">dont know who</p>
+                  <p class="subtitle is-6">Director General at  <a href="https://volunteerforum.org">Volunteerforum</a></p>
                 </div>
               </div>
             </div>
