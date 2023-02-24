@@ -313,16 +313,16 @@ function Competitionsmodel() {
       </div> */}
       <div class={`loading ${loadervisible} desktop-load`}>
         <img
-          src={loader}
+          src={cosmos}
           class="load-img"
           data-aos="zoom-out"
           
         ></img>
       </div>
-      <div class={`loading ${loadervisible} loader-mobile`}>
+      <div class={`loading  ${loadervisible} loader-mobile`}>
         <img
-          src={loader_mobile}
-          class="load-img"
+          src={cosmos}
+          class="load-img-mobile"
           data-aos="zoom-out"
           
         ></img>
@@ -654,23 +654,6 @@ function Competitionsmodel() {
             </section>
           </div>
         </div>
-        {/* <div class={`modal ${formOpen2}`}>
-          <div class="modal-background"></div>
-          <div class="modal-card">
-            <header class="modal-card-head">
-              <p class="modal-card-title">Web_Dezigner</p>
-              <button
-                class="delete"
-                aria-label="close"
-                onClick={handleClosef2}
-              ></button>
-            </header>
-            <section class="modal-card-body">
-              <img src={web_dezigner}></img>
-              <hr class="breaker-form"></hr>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSca3FbaMxqk0f4GxRIRR447UqQxQc2ppaGihDGbhUqAE5dKyQ/viewform?embedded=true" width="600" height="1082" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>            </section>
-          </div>
-        </div> */}
         <div class={`modal ${formOpen3}`}>
           <div class="modal-background"></div>
           <div class="modal-card">

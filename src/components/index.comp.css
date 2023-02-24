@@ -63,19 +63,19 @@ body{
 }
 
 .load-img{
-  height: 50%;
-  height: 50%;
-  position: absolute;
-  left: 25vw;
-  top: 25vh;
-  animation: blip 0.5s infinite;
+  height: 20%;
+  position: fixed;
+  left: 32vw;
+  right: 32vw;
+  top: 40vh;
+  animation: blip 1.5s infinite;
   /* opacity: 20%; */
 }
-.loader-mobile .load-img{
-  height: 60%;
-  position: absolute;
-  left: 25vw;
-  top: 25vh;
+.loader-mobile .load-img-mobile{
+  width: 40vw;
+  position: fixed;
+  left: 28vw;
+  top: 48vh;
   animation: bloop 4s infinite cubic-bezier(0.71, 0.03, 0.14, 0.98);
   /* opacity: 20%; */
 }
@@ -527,7 +527,7 @@ p{
 
 .iframe{
   margin-left: 3vw;
-  width: 60vw;
+  width: 50vw;
   height: 150vh;
 }
 .content{
@@ -676,8 +676,8 @@ p{
     backdrop-filter: blur(15px);
   }
   .modal-card{
-    width: 70vw;
-    margin-left: -15vw;
+    width: 90vw;
+    margin-left: 0vw;
   }
   .title.is-4{
     font-size: 1rem;
@@ -689,10 +689,23 @@ p{
   .white-text{
     font-size: 1rem !important;
   }
+  .iframe{
+    width: 70vw!important;
+  }
+  .is-align-self-center{
+    margin-right: 19vw;
+  }
 }
-
-
+@media (max-width: 500px){
+  .footer{
+    bottom: -20vh;
+  } 
+  .navbar-item{
+    padding-left: 0vw!important;
+  }
+}
 @media (max-width: 385px) {
+  
   .footer.curved{
     font-size: 0.6rem;
   }
@@ -770,8 +783,8 @@ p{
 
 }
 .modal-card{
-  width: 90vw;
-  margin-left: -45vw;
+  width: 100vw;
+  margin-left: 0vw;
 }
 .title.is-4{
   font-size: 0.6rem;
