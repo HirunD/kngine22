@@ -675,9 +675,9 @@ function Competitionsmodel() {
               <button class={`button mr-3 ${formvisibleg}`} onClick={handleformclickgirl}>Girls</button>
               <button class={`button ${formvisibleb}`} onClick={handleformclickboy}>Boys</button>
               </div>
-              <div class="girl-form"><iframe class={`hide-form ${formvisibleg}`}  src="https://docs.google.com/forms/d/e/1FAIpQLSdVM3VReeaFE-VdD9e9905XikEpd-7-1tcwlfEpgbSjv9rMvA/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              <div class="girl-form"><iframe class={`hide-form ${formvisibleg}`}  src="https://docs.google.com/forms/d/e/1FAIpQLSfVb-E41W-6Mqv_2EoxLDjSreMhxD1DzrbePsIRzFI4ctmtCw/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
               </div>
-              <div class="boy-form"><iframe class={`hide-form ${formvisibleb}`} src="https://docs.google.com/forms/d/e/1FAIpQLSfVb-E41W-6Mqv_2EoxLDjSreMhxD1DzrbePsIRzFI4ctmtCw/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              <div class="boy-form"><iframe class={`hide-form ${formvisibleb}`} src="https://docs.google.com/forms/d/e/1FAIpQLSdVM3VReeaFE-VdD9e9905XikEpd-7-1tcwlfEpgbSjv9rMvA/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
               </div>
             </section>
           </div>

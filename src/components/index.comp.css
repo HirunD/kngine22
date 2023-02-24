@@ -483,12 +483,12 @@ body{
   height: 100%;
   width: 100%;
   transition: 0.5s;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 .throwback-img img:hover{
-  transform: scale(120%);
-  filter: grayscale(0%);
+  transform: scale(110%);
+  /* filter: grayscale(0%); */
 
 }
 
