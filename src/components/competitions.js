@@ -457,7 +457,7 @@ function Competitionsmodel() {
             </header>
             <section class="modal-card-body">
               <img src={code_com}></img>
-              <iframe src="https://drive.google.com/file/d/11S-TFUXDxgxwZot0BWuu--s76-HGUbnf/preview" width="640" height="480" allow="autoplay"></iframe>
+              <iframe  class="iframe" src="https://drive.google.com/file/d/11S-TFUXDxgxwZot0BWuu--s76-HGUbnf/preview" allow="autoplay"></iframe>
             </section>
           </div>
         </div>
