@@ -457,21 +457,7 @@ function Competitionsmodel() {
             </header>
             <section class="modal-card-body">
               <img src={code_com}></img>
-              <p>
-                Coding of a program that can make a solution to the title of a
-                substantive issue. The program that gives the best solution will
-                be the winning program.
-              </p>
-              <h6 class="subtitle is-4 mt-5  ">Topic -</h6>
-              <h6 class="subtitle is-6  ">
-                A solution for a common issue of your school
-              </h6>
-              <h6 class="subtitle is-4  ">Programming languages -</h6>
-              <ul>
-                <li>• Python</li>
-                <li>• Pascal</li>
-                <li>• Visual Basic</li>
-              </ul>
+              <iframe src="https://drive.google.com/file/d/11S-TFUXDxgxwZot0BWuu--s76-HGUbnf/preview" width="640" height="480" allow="autoplay"></iframe>
             </section>
           </div>
         </div>
