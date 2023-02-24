@@ -285,6 +285,19 @@ function Competitionsmodel() {
       setloadervisible("hide-load");
     }, 3000);
   });
+    // girl-boys switch
+    const [formvisibleg, setformvisibleg] = useState("");
+    const [formvisibleb, setformvisibleb] = useState("is-active");
+
+    const handleformclickboy = () => {
+      setformvisibleg(" ");
+      setformvisibleb("is-active");
+    };
+  
+    const handleformclickgirl = () => {
+      setformvisibleg("is-active");
+      setformvisibleb(" ");
+    };
 
 
 
@@ -516,7 +529,7 @@ function Competitionsmodel() {
                 Rules and Regulations
               </h1>
               <h6 class="subtitle is-4 has-text-centered">
-                Call of Duty 4 – Modern Warfare (2007)
+                Call of Duty 4 – Modern Warfare (2007) - Boys Event
               </h6>
               <h6 class="subtitle is-5">BASIC GAME MODE SETTINGS</h6>
               <ul>
@@ -579,6 +592,10 @@ function Competitionsmodel() {
               </ol>
               <p className="pt-3">Substitutions – Only players signed up on the team list may be used as substitutes.</p>
               <p className="pt-3">If you want use custom cfg email it <a href="mailto:richmondcollegeict@gmail.com">richmondcollegeict@gmail.com</a> before 18th february 2018. If not You have to play with a cfg given to by the organizing committee</p>
+              <h6 class="subtitle is-4 has-text-centered">
+                Need For Speed - Girls Event
+              </h6>
+              <h6 class="subtitle is-5  has-text-centered">Time Trial</h6>
             </section>
           </div>
         </div>
@@ -666,9 +683,16 @@ function Competitionsmodel() {
               ></button>
             </header>
             <section class="modal-card-body">
+              
               <img src={cybercomb}></img>
-              <hr class="breaker-form"></hr>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVb-E41W-6Mqv_2EoxLDjSreMhxD1DzrbePsIRzFI4ctmtCw/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              <div class="select-gender centered-div">
+              <button class={`button mr-3 ${formvisibleg}`} onClick={handleformclickgirl}>Girls</button>
+              <button class={`button ${formvisibleb}`} onClick={handleformclickboy}>Boys</button>
+              </div>
+              <div class="girl-form"><iframe class={`hide-form ${formvisibleg}`} src="https://docs.google.com/forms/d/e/1FAIpQLSfVb-E41W-6Mqv_2EoxLDjSreMhxD1DzrbePsIRzFI4ctmtCw/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </div>
+              <div class="boy-form"><iframe class={`hide-form ${formvisibleb}`} src="https://docs.google.com/forms/d/e/1FAIpQLSfVb-E41W-6Mqv_2EoxLDjSreMhxD1DzrbePsIRzFI4ctmtCw/viewform?embedded=true" width="600" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </div>
             </section>
           </div>
         </div>

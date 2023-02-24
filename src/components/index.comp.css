@@ -336,7 +336,7 @@ body{
   }
 
   .cliped{
-    height: 19rem;
+    height: 12rem;
     width: 110vw;
     overflow: hidden;
   }
@@ -483,10 +483,13 @@ body{
   height: 100%;
   width: 100%;
   transition: 0.5s;
+  filter: grayscale(100%);
 }
 
 .throwback-img img:hover{
-  transform: scale(110%);
+  transform: scale(120%);
+  filter: grayscale(0%);
+
 }
 
 .model-holder{
@@ -545,10 +548,35 @@ p{
 .loader-mobile{
   display: none;
 }
+.centered-div{
+  padding-left: 0vw;
+}
+.button{
+  width: 100px;
+  font-weight: 800;
+  transition: 0.2s;
+}
+.select-gender .is-active{
+  background-color: rgb(30, 30, 30);
+  border: none;
+  color: rgb(254, 254, 254)!important;
+  font-weight: 800;
+  width: 150px;
+}
+.girl-form .is-active{
+  display: none;
+}
+.boy-form .is-active{
+  display: none;
+}
+.hide-form{
+  transition: 1s;
+  display: block;
+}
 
 @media (max-width: 1114px) {
   .footer{
-    bottom: -25vh;
+    bottom: -10vh;
   }
   .countdown{
     font-size: 50px;
