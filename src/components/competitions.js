@@ -724,7 +724,7 @@ function Competitionsmodel() {
       >
         <div class="container is-widescreen">
           <h3 class="title has-text-centered mt-5" data-aos="fade-up" data-aos-anchor-placement="top-center" >
-            Compititions
+            Competitions
           </h3>
           <h5 class="subtitle has-text-centered mb-5" data-aos="fade-up" data-aos-anchor-placement="top-center">
             Submit your projects before 23:59 26 February 2023
@@ -968,7 +968,7 @@ function Competitionsmodel() {
                     <div class="media">
                       <div class="media-content">
                         <p class="title is-4">Kngine'13</p>
-                        <p class="subtitle is-6">4th Generation of IT</p>
+                        <p class="subtitle is-6">KNGINE 4G</p>
                       </div>
                     </div>
                   </div>
