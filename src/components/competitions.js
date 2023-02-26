@@ -18,6 +18,8 @@ import dexigner from "../img/comp_icons/Dexigner.png";
 import intellect from "../img/comp_icons/Intellect.png";
 import web_dezigner from "../img/comp_icons/Web_Dezigner.png";
 import kngine from "../img/kngine_22.png";
+import kngine19 from "../img/throwback/kngine19.jpg";
+import kngine20 from "../img/throwback/kngine20.png";
 import kngine17 from "../img/throwback/kngine17.jpg";
 import kngine15 from "../img/throwback/kngine15.jpg";
 import kngine13 from "../img/throwback/kngine13.jpg";
@@ -25,6 +27,7 @@ import kngine12 from "../img/throwback/kngine12.jpg";
 
 import s1 from "../img/speakers/SuvinNimnaka.png";
 import s2 from "../img/speakers/MaheepaD.png";
+import s3 from "../img/speakers/SahanD.jpg";
 import throwbacks from "../img/comp_icons/Dexigner.png";
 import about from "../img/comp_icons/Intellect.png";
 import "../components/Navbar.css";
@@ -915,6 +918,23 @@ function Competitionsmodel() {
                   <div class="speakers-div is-rounded">
                     <img
                       class="speakers-img is-rounded"
+                      src={s3}
+                    // src="https://bulma.io/images/placeholders/256x256.png"
+                    ></img>
+                  </div>
+                </figure>
+                <div class="media-content has-text-centered">
+                  <p class="title is-4">Sahan Dissanayake</p>
+                  <p class="subtitle is-6">Researcher | Final Year Undergraduate at UCSC</p>
+                </div>
+              </div>
+            </div>
+            <div class="column mt-6"    >
+              <div class="hover">
+                <figure class="card-image has-text-centered is-128x128 is-square">
+                  <div class="speakers-div is-rounded">
+                    <img
+                      class="speakers-img is-rounded"
                       src={s2}
                     // src="https://bulma.io/images/placeholders/256x256.png"
                     ></img>
@@ -946,6 +966,21 @@ function Competitionsmodel() {
                 <div class="card mb-6"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
+                      <img src={kngine20} alt="Placeholder image"></img>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Kngine'20</p>
+                        <p class="subtitle is-6">Excellence Of The Experience</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-6"    >
+                  <div class="card-image">
+                    <figure class="throwback-img image is-4by3 ">
                       <img src={kngine17} alt="Placeholder image"></img>
                     </figure>
                   </div>
@@ -973,8 +1008,38 @@ function Competitionsmodel() {
                     </div>
                   </div>
                 </div>
+                <div class="card mb-6"    >
+                  <div class="card-image">
+                    <figure class="throwback-img image is-4by3 ">
+                      <img src={kngine17} alt="Placeholder image"></img>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Kngine'17</p>
+                        <p class="subtitle is-6">To Infinity and Beyond</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column ">
+                <div class="card mb-6"    >
+                  <div class="card-image">
+                    <figure class="throwback-img image is-4by3 ">
+                      <img src={kngine19} alt="Placeholder image"></img>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Kngine'19</p>
+                        <p class="subtitle is-6">To Redefine the Technology</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="card mb-6"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
