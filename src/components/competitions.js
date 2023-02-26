@@ -577,7 +577,7 @@ function Competitionsmodel() {
                 <li>mp_strike (Strike)</li>
               </ol>
               <p className="pt-3">Substitutions – Only players signed up on the team list may be used as substitutes.</p>
-              <p className="pt-3">If you want use custom cfg email it <a href="mailto:richmondcollegeict@gmail.com">richmondcollegeict@gmail.com</a> before 18th february 2018. If not You have to play with a cfg given to by the organizing committee</p>
+              <p className="pt-3">If you want use custom cfg email it <a href="mailto:richmondcollegeict@gmail.com">richmondcollegeict@gmail.com</a> before 18th february 2023. If not You have to play with a cfg given to by the organizing committee</p>
               <h6 class="subtitle is-4 has-text-centered">
                 Need For Speed - Girls Event
               </h6>
@@ -727,7 +727,7 @@ function Competitionsmodel() {
             Competitions
           </h3>
           <h5 class="subtitle has-text-centered mb-5" data-aos="fade-up" data-aos-anchor-placement="top-center">
-            Submit your projects before 23:59 26 February 2023
+            Submit your projects before 23:59 28 February 2023
           </h5>
           <div className="container" data-aos="fade"   data-aos-anchor-placement="top-center">
           <div class="columns mt-6 ">
