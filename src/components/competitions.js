@@ -632,12 +632,10 @@ function Competitionsmodel() {
             </header>
             <section class="modal-card-body">
               <img src={intellect}></img>
-              <p class="subtitle is-5  ">
-                For the students who got a wise knowledge in the ICT field. This
-                competition will be held at the ICT Day without any
-                registrations, anyone can participate.
-              </p>
-            </section>
+              <iframe src="https://drive.google.com/file/d/1qSltAMbocAI04sYfiNSXILNvAgotQW7x/preview" width="640" height="480" allow="autoplay">
+                Loading ...
+              </iframe>
+              </section>
           </div>
         </div>
         {/* forms */}
