@@ -632,9 +632,9 @@ function Competitionsmodel() {
             </header>
             <section class="modal-card-body">
               <img src={intellect}></img>
-              <iframe src="https://drive.google.com/file/d/1qSltAMbocAI04sYfiNSXILNvAgotQW7x/preview" width="640" height="480" allow="autoplay">
+              {/* <iframe src="https://drive.google.com/file/d/1qSltAMbocAI04sYfiNSXILNvAgotQW7x/preview" width="640" height="480" allow="autoplay">
                 Loading ...
-              </iframe>
+              </iframe> */}
               </section>
           </div>
         </div>
@@ -976,7 +976,7 @@ function Competitionsmodel() {
                     </div>
                   </div>
                 </div>
-                <div class="card mb-6"    >
+                <div class="card mb-6 mt-6"    >
                   <div class="card-image">
                     <figure class="throwback-img image is-4by3 ">
                       <img src={kngine17} alt="Placeholder image"></img>
