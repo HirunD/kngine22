@@ -1006,21 +1006,6 @@ function Competitionsmodel() {
                     </div>
                   </div>
                 </div>
-                <div class="card mb-6"    >
-                  <div class="card-image">
-                    <figure class="throwback-img image is-4by3 ">
-                      <img src={kngine17} alt="Placeholder image"></img>
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-content">
-                        <p class="title is-4">Kngine'17</p>
-                        <p class="subtitle is-6">To Infinity and Beyond</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
               <div class="column ">
                 <div class="card mb-6"    >
