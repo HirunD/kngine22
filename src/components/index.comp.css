@@ -726,7 +726,7 @@ p{
 }
 @media (max-width: 500px){
   .footer{
-    bottom: -20vh;
+    bottom: -9vh;
   } 
   .navbar-item{
     padding-left: 0vw!important;
@@ -822,7 +822,7 @@ p{
 }
 
 .footer{
-  bottom: -25vh ;
+  bottom: -10vh ;
   display: inherit;
 }
 }
