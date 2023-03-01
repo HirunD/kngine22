@@ -5,7 +5,7 @@ export default function homePage() {
   return (
     <>
     <section class="section">
-  <div class="container">
+  <div class="container pt-6 scontainer">
     <div class="columns is-centered">
       <div class="column is-half">
         <figure>
