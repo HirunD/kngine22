@@ -1,6 +1,6 @@
 import react, { useState, useEffect } from "react";
 import Home from "./Pages/Home";
-import Test from "./Pages/Test";
+import Souvenir from "./Pages/esouvenir";
 // import About from "./Pages/about";
 // import News from "./Pages/news";
 // import AOS from "aos";
@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test" element={<Test />} />
+          <Route path="/esouvenir" element={<Souvenir/>} />
           {/* <Route path="/contact" element={<Contact />} /> */}
           {/* <Route path="editor" element={<Editorpanel />} /> */}
           {/* <Route path="/about" element={<About />} /> */}

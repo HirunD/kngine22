@@ -632,7 +632,7 @@ function Competitionsmodel() {
             </header>
             <section class="modal-card-body">
               <img src={intellect}></img>
-              <iframe src="https://drive.google.com/file/d/1yWi46WTj-VN_sxmayGpVPvNfOdCmNoBW/preview" width="600" height="480" allow="autoplay">
+              <iframe src="https://drive.google.com/file/d/1yWi46WTj-VN_sxmayGpVPvNfOdCmNoBW/preview"frameborder="0" marginheight="0" marginwidth="0">
                 Loading…
               </iframe>
               </section>
