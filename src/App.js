@@ -1,18 +1,9 @@
-import react, { useState, useEffect } from "react";
 import Home from "./Pages/Home";
 import Souvenir from "./Pages/esouvenir";
-// import About from "./Pages/about";
-// import News from "./Pages/news";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Contact from "./Pages/contact";
 
 function App() {
-
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
 
   return (
     <div>

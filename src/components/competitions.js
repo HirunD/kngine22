@@ -143,7 +143,7 @@ function Competitionsmodel() {
   let earth = document.getElementById("planet");
   let more_info = document.getElementById("more-info");
 
-  const targetDate = new Date("March 02, 2023 09:30:00");
+  const targetDate = new Date("March 02, 2023 08:30:00");
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
 
