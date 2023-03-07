@@ -9,8 +9,8 @@ export default function homePage() {
     <div class="columns is-centered">
       <div class="column is-half">
         <figure>
-        <iframe src="https://drive.google.com/file/d/1XHsCeNfhmAzvg2--ungZx6CkGtgs2wHO/preview" width={700} height={800} frameborder="0" marginheight="0" marginwidth="0">
-      Loading..
+        <iframe src="https://drive.google.com/file/d/1IuOg6gndoEp8yiqvs862MlZ7_xs3qbt1/preview" width="700" height="800" allow="autoplay">
+    Loading ...
     </iframe>
         </figure>
       </div>
